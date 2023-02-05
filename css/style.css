@@ -42,6 +42,7 @@ Version: 2.0
     --color-black: #120e1e;
     --color-gray: #838189;
     --color-white: #fff;
+    --bs-primary-rgb: 254, 161, 22;
     --ff-main: 'Open Sans', sans-serif;
     --ff-secondary: 'Open Sans', sans-serif;
     --fw-light: 300;
@@ -52,7 +53,7 @@ Version: 2.0
     --bs-body-font-family: var(--ff-main);
     --bs-body-font-size: 1.125rem;
     --bs-body-font-weight: var(--fw-medium);
-    --bs-body-line-height: 1.2;
+    --bs-body-line-height: 1.5;
     --bs-body-color: #666565;
     --bs-body-bg: #fff;
     --bs-border-color: #dee2e6;
@@ -467,6 +468,7 @@ img {
     --bs-navbar-brand-padding-y: 0.3125rem;
     --bs-navbar-brand-margin-end: 1rem;
     --bs-navbar-brand-font-size: 1rem;
+    --bs-navbar-brand-line-height: 1.2;
     --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
     --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
     --bs-navbar-nav-link-padding-x: 1rem;
@@ -478,6 +480,10 @@ img {
     --bs-navbar-toggler-border-radius: 0.375rem;
     --bs-navbar-toggler-focus-width: 0;
     --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+}
+
+.navbar-brand {
+    line-height: var(--bs-navbar-brand-line-height);
 }
 
 .navbar-nav {
@@ -593,6 +599,7 @@ img {
     border-radius: 50%;
     background-color: #fbfbfb;
     box-shadow: 0 1px 3px 0px rgb(0 0 0 / 15%);
+    color: var(--color-primary-1);
 }
 
 .swiper-button-next:after,
@@ -676,11 +683,14 @@ img {
     margin-left: 0;
 }
 
-.card.card-price {
-    --bs-card-border-color: transparent;
+.card.card-blog {
+    --bs-link-color-rgb: 18, 14, 30;
+    --bs-link-hover-color-rgb: var(--color-primary-1-rgb);
+    --bs-card-border-width: 0;
+    --bs-card-cap-padding-y: 1rem;
 }
 
-.card.card-blog {
+.card.card-magazin {
     --bs-link-color-rgb: 18, 14, 30;
     --bs-link-hover-color-rgb: var(--color-primary-1-rgb);
     --bs-card-border-width: 0;
@@ -756,14 +766,45 @@ img {
 
 @keyframes pulse-border {
     0% {
-      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-      opacity: 1;
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
     }
+
     100% {
-      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-      opacity: 0;
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
     }
-  }
+}
+
+.meta-metro, .meta-address {
+    position: relative;
+    padding-left: 30px;
+}
+
+.meta-metro:before, .meta-address:before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.meta-metro:before {
+    content: url(../img/mosmetro.svg);
+}
+
+.meta-address:before {
+    content: url(../img/location.svg);    
+}
+
+.swiper.navigation-outside~.swiper-button-prev {
+    left: -50px;
+}
+
+.swiper.navigation-outside~.swiper-button-next {
+    right: -50px;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ + MEDIA ]*/
