@@ -1,14 +1,399 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png" />
+
     <title>index</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+    <!-- ТОП Меню -->
+    <!-- <section class="section header-top border-bottom d-none d-lg-block py-2">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="d-none d-lg-block">
+                <a class="navbar-brand fw-700 d-inline-flex align-items-center hover-opacity" href="index.html">
+                    <img class="d-inline-block me-2" src="img/logo-ceny-05-150x69-1.png" alt="Logo" width="150" height="69">
+                    Смешные Цены
+                </a>
+            </div>
+            <ul class="nav me-auto">
+                <li class="nav-item"><a class="nav-link active py-3" href="#">Каталог сайтов</a></li>
+                <li class="nav-item"><a class="nav-link py-3" href="#">Продвижение</a></li>
+                <li class="nav-item"><a class="nav-link py-3" href="#">Реклама</a></li>
+                <li class="nav-item"><a class="nav-link py-3" href="#">Блог</a></li>
+                <li class="nav-item"><a class="nav-link py-3" href="#">Партнёры</a></li>
+            </ul>
+            <a class="color-black color-primary-hover fs-5 fw-medium" href="tel:+74951595901">+7 (495) 159-59-01</a>
+        </div>
+    </section> -->
+
+    <!-- Меню -->
+    <header class="header sticky-top shadow-sm py-2">
+        <nav class="navbar navbar-expand-xl">
+            <div class="container">
+
+                <div class="d-none d-xl-block">
+                    <a class="navbar-brand fs-5 fw-700 d-inline-flex align-items-center hover-opacity"
+                        href="index.html">
+                        <img class="d-inline-block me-2" src="img/logo-ceny-05-150x69-1.png" alt="Logo" width="120"
+                            height="55">
+                        Смешные Цены
+                    </a>
+                </div>
+
+                <div class="d-xl-none">
+                    <button type="button" class="btn btn-icon rounded-circle"><i class="bx bx-search"></i></button>
+                </div>
+
+                <div class="d-xl-none">
+                    <a class="navbar-brand fw-700 d-inline-flex align-items-center hover-opacity" href="index.html">
+                        <img class="d-inline-block me-2" src="img/logo-ceny-05-150x69-1.png" alt="Logo" width="100"
+                            height="46">
+                    </a>
+                </div>
+
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Магазины на карте</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="d-none d-xl-block">
+                    <button type="button" class="btn btn-icon btn-primary rounded-circle"><i
+                            class="bx bx-search"></i></button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="main py-5">
+
+        <!-- Реклама -->
+        <section class="section bg-light" style="margin-top:-3rem; padding: 5rem 0;">
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <img src="img/banner.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Контент -->
+        <section class="section py-5">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-4 order-lg-2">
+                        <div class="mb-5">
+                            <h3 class="section-title text-start mb-4">Рубрики</h3>
+                            <div class="category-list d-flex flex-column">
+                                <a class="text-body d-flex mb-3" href="https://smeshnie-ceny.ru/news/">
+                                    <span>Новости</span>
+                                </a>
+                                <a class="text-body d-flex mb-3" href="https://smeshnie-ceny.ru/stati/">
+                                    <span>Статьи</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 order-lg-1">
+                        <p><img loading="lazy" class="alignleft size-thumbnail wp-image-62"
+                                src="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-150x150.png" alt=""
+                                width="150" height="150"
+                                srcset="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-150x150.png 150w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-100x100.png 100w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-160x160.png 160w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-320x320.png 320w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile.png 250w"
+                                sizes="(max-width: 150px) 100vw, 150px"></p>
+                        <p>Вы любите делать покупки? Приобретать стильные и модные обновки для гардероба? Не всегда
+                            желания соизмеримы с бюджетом? В таком случае, добро пожаловать в мир стиля, красоты и
+                            доступности! <strong>Магазин женской и мужской одежды</strong> – это то, что вам нужно. Ведь
+                            основное преимущество площадки – это по-настоящему <strong>смешные цены</strong> на весь
+                            ассортимент каталога! И даже беглого взгляда по ценникам на предметы гардероба будет
+                            достаточно, чтобы понять – это утверждение абсолютно объективно.</p>
+                        <h2>Ключевое преимущество – самые выгодные цены на все вещи</h2>
+                        <p>Основным отличием площадки является ценовая политика. Закупка всех номенклатурных единиц
+                            товара производится напрямую у производителей, а также у тех оптовых поставщиков, которые
+                            предлагают самые выгодные цены. Что это означает для наших покупателей? Все просто – любая
+                            модель, представленная в коллекции, продается по сниженной стоимости. Выбирая понравившийся
+                            комплект одежды или отдельный элемент гардероба, вы можете быть абсолютно уверенны в том,
+                            что дешевле это изделие вы нигде не найдете! Сомневаетесь? Проверьте!</p>
+                        <p>Помимо того, что на весь модельный ряд изначально заложена низкая рыночная стоимость,
+                            <strong>магазин одежды</strong> предлагает своим постоянным и новым клиентам особые условия
+                            сотрудничества. Постоянные скидки, система лояльности, бонусы при повторном шопинге – и это
+                            еще не все! Более детальную и актуальную информацию всегда можно узнать в разделе <strong><a
+                                    target="_blank" href="/akcii-i-skidki" rel="noopener noreferrer">новостей и
+                                    акций</a></strong>.
+                        </p>
+                        <h2>Одна единица товара по цене оптовой закупки!</h2>
+                        <p>Только для клиентов нашего ресурса брендовая и стильная <strong>одежда для мужчин</strong> и
+                            женщин по оптовой цене. Огромный выбор, богатый ассортимент и отличные эксплуатационные
+                            свойства одежды – еще один приятный нюанс для целевой аудитории. Наша миссия – позволить
+                            каждому жителю страны носить натуральную, качественную и современную одежду, цена которой
+                            доступна каждому! И это не «ноу-хау», это традиционная политика многих западных
+                            шопинг-молов, которая наконец-то дошла и до просторов СНГ.</p>
+                        <h2>Актуальный каталог товаров</h2>
+                        <p>Ассортимент магазина совмещает варианты одежды под любые задачи и вкус:</p>
+                        <ul>
+                            <li>Повседневные наряды для мужчин и женщин.<br>
+                                Огромный выбор продукции включает множество моделей «Casual» для повседневной носки. Это
+                                платья и сарафаны, джинсы и брюки, рубашки и футболки, блузы и регланы. Каждый желающий
+                                сможет подобрать оптимальное решение для своих нужд.</li>
+                            <li>На страже дресс-кода.<br>
+                                Любите модно и оригинально одеваться? В таком случае, линейка предметов женских и
+                                мужских предметов гардероба для офиса – то, что нужно. Изысканные женские костюмы,
+                                практичные мужские варианты, огромный выбор блуз, рубашек, пиджаков, юбок и брюк
+                                позволят вам всегда выглядеть модно, стильно и не нарушать корпоративный стиль. С нашим
+                                магазином вы быстро поймете – соблюдать дресс-код и выглядеть незаурядно реально!</li>
+                            <li>Сезонный гардероб.<br>
+                                Собираетесь в отпуск? Предвкушаете досуг на морском побережье или с нетерпением ждете
+                                адреналиновой эйфории от лихого спуска с горы на лыжах? Возможно, вы предпочитаете
+                                дайвинг или путешествие с палаткой? У нас в магазине вы сможете полностью обновить свой
+                                гардероб и подобрать образцы одежды, которые в полной мере соответствуют грядущему
+                                досугу.</li>
+                            <li>Для выхода «в свет».<br>
+                                Коктейльные платья, вечерние наряды для мужчин и женщин, аксессуары и еще многое другое,
+                                что позволит сделать ваш образ неподражаемым, привлекательным и стильным.</li>
+                        </ul>
+                        <p>Среди наших клиентов люди разной возрастной категории, телосложения и образа жизни. Поэтому,
+                            в <b>«Смешных ценах»</b> вас ждет не только богатство выбора по стилю и направлению, но
+                            также очень обширный выбор размера. <strong><a target="_blank" href="/kak-vybrat-razmer"
+                                    rel="noopener noreferrer">Размерная сетка всех товаров</a></strong> включает образцы
+                            для стройных и людей с формами, невысоких и модников с ростом выше среднего. У нас комфортно
+                            каждому. Наверняка, вы уже сами в этом убедились.</p>
+                        <h2>Актуальность ассортимента</h2>
+                        <p><img loading="lazy" class="alignleft size-thumbnail wp-image-55"
+                                src="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-150x150.png" alt=""
+                                width="150" height="150"
+                                srcset="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-150x150.png 150w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-100x100.png 100w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-160x160.png 160w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-320x320.png 320w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka.png 250w"
+                                sizes="(max-width: 150px) 100vw, 150px"></p>
+                        <p><strong>«Смешные цены»</strong> – это официальный сайт для всех модниц и модников. Основная
+                            целевая аудитория – люди, которые предпочитают оставаться модным, но тщательно следят за
+                            качеством покупаемых вещей и не хотят тратить лишнее за накрутку. Благодаря тому, что
+                            магазин осуществляет реализацию одежды онлайн, у нас нет накрутки, как у стационарных
+                            магазинов, которые вынуждены в стоимость изделия закладывать еще и расходы по аренде и
+                            обслуживанию площадки в городе. Наша цена – это чистая стоимость выбранной вещи именно
+                            поэтому у нас самые выгодные цены и просто огромный выбор.</p>
+                        <p>Более того, мы стремимся постоянно обновлять все категории, радуя наших постоянных клиентов
+                            стильным и качественными новинками из Европы и Азии. Чтобы исключить залежи товаров,
+                            регулярно проводятся специальные <strong><a target="_blank" href="/akcii-i-skidki"
+                                    rel="noopener noreferrer">распродажи</a></strong> – ощутимая скидка на некоторые
+                            модели – это не миф, а реальность, которая ждет каждого нашего покупателя.</p>
+                        <h2>Смешные цены – место, где одежда действительно поражает</h2>
+                        <p>Если вы хотите модно и практично одеваться, то добро пожаловать в магазин одежды, где вас
+                            ждет самый большой выбор товаров по самым низким ценам. Актуальные коллекции для мужчин и
+                            женщин по доступной цене представлены огромным выбором. Наверняка вы уже успели оценить
+                            привлекательность цены и разнообразие ассортимента. Нет? В таком случае, не откладывайте в
+                            долгий ящик, спешите изучить акционные предложения, а также новые поступления, чтобы
+                            порадовать себя бюджетными и качественными покупками уже сегодня.</p>
+                        <p>Спешите порадовать себя самыми яркими и выгодными вариантами! Разнообразие ассортимента,
+                            широкая размерная сетка, а также возможность получить предварительную консультацию сделают
+                            шопинг в магазине одежды еще более комфортным и приятным.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блог -->
+        <section class="section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="text-center mb-5">
+                            <h2 class="h1">Наши новости</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper blogSwiper">
+                    <div class="swiper-wrapper mb-5">
+                        <div class="swiper-slide h-auto p-2">
+                            <div class="card card-blog shadow-sm h-100">
+                                <a class="hover-shine" href="blog-item.html">
+                                    <img class="card-img-top" src="img/blog-thumb-01.jpg" alt="Image">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-title fw-600 mb-3">
+                                        <a class="text-decoration-none" href="blog-item.html">Несколько общих правил,
+                                            которым мы советуем следовать при создании контента</a>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="small text-muted">8 июля 2022</span>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bx-show-alt small text-muted mt-1 me-1"></i>
+                                            <span class="small text-muted">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto p-2">
+                            <div class="card card-blog shadow-sm h-100">
+                                <a class="hover-shine" href="blog-item.html">
+                                    <img class="card-img-top" src="img/blog-thumb-02.jpg" alt="Image">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-title fw-600 mb-3">
+                                        <a class="text-decoration-none" href="blog-item.html">Как привлечь трафик на
+                                            сайт?</a>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="small text-muted">8 июля 2022</span>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bx-show-alt small text-muted mt-1 me-1"></i>
+                                            <span class="small text-muted">35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto p-2">
+                            <div class="card card-blog shadow-sm h-100">
+                                <a class="hover-shine" href="blog-item.html">
+                                    <img class="card-img-top" src="img/blog-thumb-03.jpg" alt="Image">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-title fw-600 mb-3">
+                                        <a class="text-decoration-none" href="blog-item.html">Вывести сайт в топ выдачи
+                                            поисковых систем: стратегии продвижения.</a>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="small text-muted">8 июля 2022</span>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bx-show-alt small text-muted mt-1 me-1"></i>
+                                            <span class="small text-muted">97</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto p-2">
+                            <div class="card card-blog shadow-sm h-100">
+                                <a class="hover-shine" href="blog-item.html">
+                                    <img class="card-img-top" src="img/blog-thumb-02.jpg" alt="Image">
+                                </a>
+                                <div class="card-body">
+                                    <p class="card-title fw-600 mb-3">
+                                        <a class="text-decoration-none" href="blog-item.html">С наступившим Новым годом
+                                            и Рождеством!</a>
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="small text-muted">8 июля 2022</span>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bx bx-show-alt small text-muted mt-1 me-1"></i>
+                                            <span class="small text-muted">170</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-lg-flex"></div>
+                    <div class="swiper-button-prev d-none d-lg-flex"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section py-5">
+            <div class="container">
+                <div class="overflow-hidden rounded-3">
+                    <div class="row g-0">
+                        <div class="col-lg-4 bg-dark d-flex align-items-center">
+                            <div class="p-5">
+                                <h3 class="text-white mb-4">Как начать продавать на Wildberries</h3>
+                                <p class="text-white mb-4">В скором времени «Смешные Цены» запустит серию обучающих роликов. Если вам кажется, что заключить договор с Вайлдберриз - это сложно, просто посмотрите это видео</p>
+                                <a class="btn btn-primary btn-lg" href="#">Больше видео</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="cta-video bg-img" style="background-image: linear-gradient(rgba(15, 23, 43, 0.1), rgba(15, 23, 43, 0.1)), url(https://smeshnie-ceny.ru/wp-content/themes/ceny-2/img/video.jpg);">
+                                <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/3t9dekbUTt8" data-bs-target="#videoModal">
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Шаблон секции -->
+        <!-- <section class="section py-5">
+            <div class="container"></div>
+        </section> -->
+
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-8 order-lg-2">
+                    <div class="text-center text-lg-end">
+                        <ul class="nav justify-content-center justify-content-lg-end">
+                            <li class="nav-item"><a href="#" class="nav-link px-2">Реклама партнёрам</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2">Контакты</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2">Политика безопасности данных</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-lg-1">
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <a class="navbar-brand fw-700 d-inline-flex align-items-center hover-opacity" href="index.html">
+                            <img class="d-inline-block me-2" src="img/logo-ceny-05-150x69-1.png" alt="Logo" width="150"
+                                height="69">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="text-center text-lg-start">
+                        <p class="small color-gray">© 2005-
+                            <script>document.write(new Date().getFullYear())</script> Смешные Цены | Официальный сайт.
+                            Все права защищены.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
+
 </html>
