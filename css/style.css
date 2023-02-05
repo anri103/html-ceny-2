@@ -704,7 +704,7 @@ img {
 .cta-video {
     position: relative;
     height: 100%;
-    min-height: 410px;
+    min-height: 215px;
 }
 
 .cta-video .btn-play {
@@ -811,7 +811,12 @@ img {
 
 @media (min-width: 576px) {}
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    .cta-video {
+        min-height: 410px;
+    }
+}
 
 @media (min-width: 992px) {}
 
