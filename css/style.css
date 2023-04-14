@@ -310,26 +310,6 @@ textarea {
     }
 }
 
-.header-fixed {
-    top: -100%;
-    transition: top 0.3s ease;
-}
-
-.header-fixed.show {
-    top: 0;
-}
-
-.header-fixed .logo {
-    width: 80px;
-}
-
-@media (max-width: 1024px) {
-    .header-fixed {
-        border-bottom-right-radius: 1rem;
-        border-bottom-left-radius: 1rem;
-    }
-}
-
 /*//////////////////////////////////////////////////////////////////
 [ + NAV ]*/
 

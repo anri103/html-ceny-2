@@ -1,13 +1,11 @@
-window.addEventListener('DOMContentLoaded', event => { });
-
-window.onscroll = function () {
+window.onscroll = function() {
     const windowScroll = window.scrollY;
-    const fixedMenu = document.querySelector('.header-fixed');
-    if (windowScroll > 500) {
-        fixedMenu.classList.add('show');
+	const fixedMenu = document.querySelector('.sticky-heading');
+    if (windowScroll > 200) {
+        fixedMenu.classList.add('shadow-sm');
     }
     else {
-        fixedMenu.classList.remove('show');
+        fixedMenu.classList.remove('shadow-sm');
     }
 }
 
