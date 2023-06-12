@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <title>Index - SC</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-light">
+
+    <!-- Меню -->
+    <header class="header sticky-heading sticky-top bg-white py-2 py-lg-0">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand fs-5 fw-700 d-flex align-items-center hover-opacity" href="#">
+                    <img class="logo d-inline-block me-2" src="img/logo-ceny-05-150x69-1.png" alt="SC Logo" title="SC Logo">
+                    <div class="d-none d-md-flex flex-column align-items-start">
+                        <span class="text-uppercase">Смешные Цены</span>
+                        <span class="small fw-400 text-muted">Официальный сайт</span>
+                    </div>
+                </a>
+                <div class="d-block d-lg-none">
+                    <ul class="list-inline mb-0 d-flex align-items-center">
+                        <li class="list-inline-item">
+                            <a class="nav-link" href="#offcanvas-search" data-bs-toggle="offcanvas" aria-controls="offcanvas-search">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <!-- Пример активного пункта меню первого уровня -->
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Каталог</a>
+                            <div class="dropdown-menu">
+                                <!-- Пример активного пункта меню второго уровня -->
+                                <a class="dropdown-item" href="#">Одежда</a>
+                                <a class="dropdown-item" href="#">Обувь</a>
+                                <a class="dropdown-item" href="#">Товары для дома</a>
+                                <a class="dropdown-item" href="#">Товары для сада</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Магазины на карте</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                    </ul>
+                    <div class="d-none d-lg-block ms-2">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item">
+                                <a class="nav-link" href="#offcanvas-search" data-bs-toggle="offcanvas" aria-controls="offcanvas-search">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Форма поиска -->
+        <div class="offcanvas offcanvas-top offcanvas-search" id="offcanvas-search" tabindex="-1">
+            <div class="offcanvas-body">
+                <div class="container">
+                    <div class="py-3">
+                        <form class="search-form" action="#">
+                            <div class="position-relative d-flex align-items-center">
+                                <input type="text" class="form-control ps-0 pe-5" placeholder="Поиск по сайту">
+                                <button type="submit"
+                                    class="btn p-1 border-0 position-absolute top-50 end-0 translate-middle-y z-index-5 me-5">
+                                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
+                                    </svg>
+                                </button>
+                                <button type="button" class="btn p-1 border-0 position-absolute top-50 end-0 translate-middle-y z-index-5" data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L24 24" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 24L24 1" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Реклама -->
+    <section class="section py-3">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <img src="img/ya-ad-top.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Главный контейнер -->
+    <main class="main">
+
+        <!-- Контент с сайдбаром -->
+        <section class="section bg-white py-5">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Колонка с рекламой -->
+                    <div class="col-lg-3">
+                        <div class="sidebar-container sidebar-left">
+                            <div class="sidebar-widget ad-widget position-sticky">
+                                <img src="img/ya-ad-side.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Колонка с контентом -->
+                    <div class="col-lg-6">
+                        <!-- В этот контейнер выводим контент страницы -->
+                        <div class="content-container">
+                            <p><img loading="lazy" class="alignleft size-thumbnail wp-image-62"
+                                src="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-150x150.png" alt=""
+                                width="150" height="150"
+                                srcset="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-150x150.png 150w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-100x100.png 100w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-160x160.png 160w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile-320x320.png 320w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/smile.png 250w"
+                                sizes="(max-width: 150px) 100vw, 150px"></p>
+                            <p>Вы любите делать покупки? Приобретать стильные и модные обновки для гардероба? Не всегда
+                                желания соизмеримы с бюджетом? В таком случае, добро пожаловать в мир стиля, красоты и
+                                доступности! <strong>Магазин женской и мужской одежды</strong> – это то, что вам нужно. Ведь
+                                основное преимущество площадки – это по-настоящему <strong>смешные цены</strong> на весь
+                                ассортимент каталога! И даже беглого взгляда по ценникам на предметы гардероба будет
+                                достаточно, чтобы понять – это утверждение абсолютно объективно.</p>
+                            <h2>Ключевое преимущество – самые выгодные цены на все вещи</h2>
+                            <p>Основным отличием площадки является ценовая политика. Закупка всех номенклатурных единиц
+                                товара производится напрямую у производителей, а также у тех оптовых поставщиков, которые
+                                предлагают самые выгодные цены. Что это означает для наших покупателей? Все просто – любая
+                                модель, представленная в коллекции, продается по сниженной стоимости. Выбирая понравившийся
+                                комплект одежды или отдельный элемент гардероба, вы можете быть абсолютно уверенны в том,
+                                что дешевле это изделие вы нигде не найдете! Сомневаетесь? Проверьте!</p>
+                            <p>Помимо того, что на весь модельный ряд изначально заложена низкая рыночная стоимость,
+                                <strong>магазин одежды</strong> предлагает своим постоянным и новым клиентам особые условия
+                                сотрудничества. Постоянные скидки, система лояльности, бонусы при повторном шопинге – и это
+                                еще не все! Более детальную и актуальную информацию всегда можно узнать в разделе <strong><a
+                                        target="_blank" href="/akcii-i-skidki" rel="noopener noreferrer">новостей и
+                                        акций</a></strong>.
+                            </p>
+                            <h2>Одна единица товара по цене оптовой закупки!</h2>
+                            <p>Только для клиентов нашего ресурса брендовая и стильная <strong>одежда для мужчин</strong> и
+                                женщин по оптовой цене. Огромный выбор, богатый ассортимент и отличные эксплуатационные
+                                свойства одежды – еще один приятный нюанс для целевой аудитории. Наша миссия – позволить
+                                каждому жителю страны носить натуральную, качественную и современную одежду, цена которой
+                                доступна каждому! И это не «ноу-хау», это традиционная политика многих западных
+                                шопинг-молов, которая наконец-то дошла и до просторов СНГ.</p>
+                            <h2>Актуальный каталог товаров</h2>
+                            <p>Ассортимент магазина совмещает варианты одежды под любые задачи и вкус:</p>
+                            <ul>
+                                <li>Повседневные наряды для мужчин и женщин.<br>
+                                    Огромный выбор продукции включает множество моделей «Casual» для повседневной носки. Это
+                                    платья и сарафаны, джинсы и брюки, рубашки и футболки, блузы и регланы. Каждый желающий
+                                    сможет подобрать оптимальное решение для своих нужд.</li>
+                                <li>На страже дресс-кода.<br>
+                                    Любите модно и оригинально одеваться? В таком случае, линейка предметов женских и
+                                    мужских предметов гардероба для офиса – то, что нужно. Изысканные женские костюмы,
+                                    практичные мужские варианты, огромный выбор блуз, рубашек, пиджаков, юбок и брюк
+                                    позволят вам всегда выглядеть модно, стильно и не нарушать корпоративный стиль. С нашим
+                                    магазином вы быстро поймете – соблюдать дресс-код и выглядеть незаурядно реально!</li>
+                                <li>Сезонный гардероб.<br>
+                                    Собираетесь в отпуск? Предвкушаете досуг на морском побережье или с нетерпением ждете
+                                    адреналиновой эйфории от лихого спуска с горы на лыжах? Возможно, вы предпочитаете
+                                    дайвинг или путешествие с палаткой? У нас в магазине вы сможете полностью обновить свой
+                                    гардероб и подобрать образцы одежды, которые в полной мере соответствуют грядущему
+                                    досугу.</li>
+                                <li>Для выхода «в свет».<br>
+                                    Коктейльные платья, вечерние наряды для мужчин и женщин, аксессуары и еще многое другое,
+                                    что позволит сделать ваш образ неподражаемым, привлекательным и стильным.</li>
+                            </ul>
+                            <p>Среди наших клиентов люди разной возрастной категории, телосложения и образа жизни. Поэтому,
+                                в <b>«Смешных ценах»</b> вас ждет не только богатство выбора по стилю и направлению, но
+                                также очень обширный выбор размера. <strong><a target="_blank" href="/kak-vybrat-razmer"
+                                        rel="noopener noreferrer">Размерная сетка всех товаров</a></strong> включает образцы
+                                для стройных и людей с формами, невысоких и модников с ростом выше среднего. У нас комфортно
+                                каждому. Наверняка, вы уже сами в этом убедились.</p>
+                            <h2>Актуальность ассортимента</h2>
+                            <p><img loading="lazy" class="alignleft size-thumbnail wp-image-55"
+                                    src="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-150x150.png" alt=""
+                                    width="150" height="150"
+                                    srcset="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-150x150.png 150w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-100x100.png 100w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-160x160.png 160w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka-320x320.png 320w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/pokupka.png 250w"
+                                    sizes="(max-width: 150px) 100vw, 150px"></p>
+                            <p><strong>«Смешные цены»</strong> – это официальный сайт для всех модниц и модников. Основная
+                                целевая аудитория – люди, которые предпочитают оставаться модным, но тщательно следят за
+                                качеством покупаемых вещей и не хотят тратить лишнее за накрутку. Благодаря тому, что
+                                магазин осуществляет реализацию одежды онлайн, у нас нет накрутки, как у стационарных
+                                магазинов, которые вынуждены в стоимость изделия закладывать еще и расходы по аренде и
+                                обслуживанию площадки в городе. Наша цена – это чистая стоимость выбранной вещи именно
+                                поэтому у нас самые выгодные цены и просто огромный выбор.</p>
+                            <p>Более того, мы стремимся постоянно обновлять все категории, радуя наших постоянных клиентов
+                                стильным и качественными новинками из Европы и Азии. Чтобы исключить залежи товаров,
+                                регулярно проводятся специальные <strong><a target="_blank" href="/akcii-i-skidki"
+                                        rel="noopener noreferrer">распродажи</a></strong> – ощутимая скидка на некоторые
+                                модели – это не миф, а реальность, которая ждет каждого нашего покупателя.</p>
+                            <h2>Смешные цены – место, где одежда действительно поражает</h2>
+                            <p>Если вы хотите модно и практично одеваться, то добро пожаловать в магазин одежды, где вас
+                                ждет самый большой выбор товаров по самым низким ценам. Актуальные коллекции для мужчин и
+                                женщин по доступной цене представлены огромным выбором. Наверняка вы уже успели оценить
+                                привлекательность цены и разнообразие ассортимента. Нет? В таком случае, не откладывайте в
+                                долгий ящик, спешите изучить акционные предложения, а также новые поступления, чтобы
+                                порадовать себя бюджетными и качественными покупками уже сегодня.</p>
+                            <p>Спешите порадовать себя самыми яркими и выгодными вариантами! Разнообразие ассортимента,
+                                широкая размерная сетка, а также возможность получить предварительную консультацию сделают
+                                шопинг в магазине одежды еще более комфортным и приятным.</p>
+                        </div>
+                    </div>
+
+                    <!-- Колонка с рекламой -->
+                    <div class="col-lg-3">
+                        <div class="sidebar-container sidebar-right">
+                            <div class="sidebar-widget">
+                                <h3 class="section-title text-start mb-4">Рубрики</h3>
+                                <div class="category-list d-flex flex-column align-items-start">
+                                    <a class="text-body d-flex mb-3" href="https://smeshnie-ceny.ru/news/">
+                                        <span>Новости</span>
+                                    </a>
+                                    <a class="text-body d-flex mb-3" href="https://smeshnie-ceny.ru/stati/">
+                                        <span>Статьи</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget ad-widget">
+                                <img src="img/ya-ad-side.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Магазины -->
+        <section class="section py-5 px-lg-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2>Смешные Цены магазины в Москве</h2>
+                </div>
+                <div class="magazinSwiper-container position-relative swiper-navigation-outside">
+                    <!-- Выводить последние 10 постов -->
+                    <div class="swiper magazinSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card card-magazin">
+                                    <div class="card-img-scale position-relative">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/magazin/ba10a93428488789f668e3c751d69212.jpg 512w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 300w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 150w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 768w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 375w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                        <div class="position-absolute bottom-0 start-0 p-3">
+                                            <div class="badge text-bg-dark fs-6 fw-400 rounded-pill">Смешные Цены</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h5 fw-600">
+                                            <a href="#">«Смешные Цены» на Планерной</a>
+                                        </p>
+                                        <div class="meta-wrapper">
+                                            <span class="meta-metro">Планерная</span>
+                                            <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-magazin">
+                                    <div class="card-img-scale position-relative">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/magazin/ba10a93428488789f668e3c751d69212.jpg 512w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 300w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 150w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 768w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 375w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                        <div class="position-absolute bottom-0 start-0 p-3">
+                                            <div class="badge text-bg-dark fs-6 fw-400 rounded-pill">Смешные Цены</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h5 fw-600">
+                                            <a href="#">«Смешные Цены» на Авиамоторной</a>
+                                        </p>
+                                        <div class="meta-wrapper">
+                                            <span class="meta-metro">Планерная</span>
+                                            <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-magazin">
+                                    <div class="card-img-scale position-relative">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/magazin/ba10a93428488789f668e3c751d69212.jpg 512w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 300w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 150w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 768w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 375w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                        <div class="position-absolute bottom-0 start-0 p-3">
+                                            <div class="badge text-bg-dark fs-6 fw-400 rounded-pill">Смешные Цены</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h5 fw-600">
+                                            <a href="#">«Смешные Цены» на Планерной</a>
+                                        </p>
+                                        <div class="meta-wrapper">
+                                            <span class="meta-metro">Планерная</span>
+                                            <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-magazin">
+                                    <div class="card-img-scale position-relative">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/magazin/ba10a93428488789f668e3c751d69212.jpg 512w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 300w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 150w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 768w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 375w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                        <div class="position-absolute bottom-0 start-0 p-3">
+                                            <div class="badge text-bg-dark fs-6 fw-400 rounded-pill">Смешные Цены</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h5 fw-600">
+                                            <a href="#">«Смешные Цены» на Авиамоторной</a>
+                                        </p>
+                                        <div class="meta-wrapper">
+                                            <span class="meta-metro">Планерная</span>
+                                            <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-magazin">
+                                    <div class="card-img-scale position-relative">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/magazin/ba10a93428488789f668e3c751d69212.jpg 512w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 300w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 150w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 768w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 375w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                        <div class="position-absolute bottom-0 start-0 p-3">
+                                            <div class="badge text-bg-dark fs-6 fw-400 rounded-pill">Смешные Цены</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h5 fw-600">
+                                            <a href="#">«Смешные Цены» на Планерной</a>
+                                        </p>
+                                        <div class="meta-wrapper">
+                                            <span class="meta-metro">Планерная</span>
+                                            <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-magazin">
+                                    <div class="card-img-scale position-relative">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/magazin/ba10a93428488789f668e3c751d69212.jpg 512w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 300w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 150w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 768w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 375w, img/magazin/ba10a93428488789f668e3c751d69212.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                        <div class="position-absolute bottom-0 start-0 p-3">
+                                            <div class="badge text-bg-dark fs-6 fw-400 rounded-pill">Смешные Цены</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h5 fw-600">
+                                            <a href="#">«Смешные Цены» на Авиамоторной</a>
+                                        </p>
+                                        <div class="meta-wrapper">
+                                            <span class="meta-metro">Планерная</span>
+                                            <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="swiper-button-next d-none d-lg-flex"></div>
+                    <div class="swiper-button-prev d-none d-lg-flex"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новости -->
+        <section class="section py-5 px-lg-5">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2>Наши новости</h2>
+                </div>
+                <div class="blogSwiper-container position-relative swiper-navigation-outside">
+                    <!-- Выводить последние 10 постов -->
+                    <div class="swiper blogSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card card-blog">
+                                    <div class="card-img-scale">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="512" height="512" src="img/blog/families-illustration_23-2148901830-512x512.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/blog/families-illustration_23-2148901830-512x512.jpg 512w, img/blog/families-illustration_23-2148901830-300x300.jpg 300w, img/blog/families-illustration_23-2148901830-150x150.jpg 150w, img/blog/families-illustration_23-2148901830-768x768.jpg 768w, img/blog/families-illustration_23-2148901830-375x375.jpg 375w, img/blog/families-illustration_23-2148901830.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h6 fw-600">
+                                            <a href="#">Несколько общих правил, оторым мы советуем следовать при создании контента</a>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="small text-muted">8 июля 2022</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(108, 117, 125, 1);"><path d="M14 12c-1.095 0-2-.905-2-2 0-.354.103-.683.268-.973C12.178 9.02 12.092 9 12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3 1.641 0 3-1.358 3-3 0-.092-.02-.178-.027-.268-.29.165-.619.268-.973.268z"></path><path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path></svg>
+                                                <span class="small text-muted">17</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-blog">
+                                    <div class="card-img-scale">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="512" height="512" src="img/blog/6103779-512x512.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/blog/6103779-512x512.jpg 512w, img/blog/6103779-300x300.jpg 300w, img/blog/6103779.jpg 1024w, img/blog/6103779-150x150.jpg 150w, img/blog/6103779-768x768.jpg 768w, img/blog/6103779-375x375.jpg 375w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h6 fw-600">
+                                            <a href="#">Как привлечь трафик на сайт?</a>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="small text-muted">8 июля 2022</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(108, 117, 125, 1);"><path d="M14 12c-1.095 0-2-.905-2-2 0-.354.103-.683.268-.973C12.178 9.02 12.092 9 12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3 1.641 0 3-1.358 3-3 0-.092-.02-.178-.027-.268-.29.165-.619.268-.973.268z"></path><path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path></svg>
+                                                <span class="small text-muted">35</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-blog">
+                                    <div class="card-img-scale">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="512" height="512" src="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg" class="card-img-top" alt="" loading="lazy" srcset="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg 512w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-300x300.jpg 300w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475.jpg 1024w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-150x150.jpg 150w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-768x768.jpg 768w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-375x375.jpg 375w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h6 fw-600">
+                                            <a href="#">Праздник День Победы 9 мая</a>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="small text-muted">8 июля 2022</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(108, 117, 125, 1);"><path d="M14 12c-1.095 0-2-.905-2-2 0-.354.103-.683.268-.973C12.178 9.02 12.092 9 12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3 1.641 0 3-1.358 3-3 0-.092-.02-.178-.027-.268-.29.165-.619.268-.973.268z"></path><path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path></svg>
+                                                <span class="small text-muted">35</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-blog">
+                                    <div class="card-img-scale">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="512" height="512" src="img/blog/families-illustration_23-2148901830-512x512.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/blog/families-illustration_23-2148901830-512x512.jpg 512w, img/blog/families-illustration_23-2148901830-300x300.jpg 300w, img/blog/families-illustration_23-2148901830-150x150.jpg 150w, img/blog/families-illustration_23-2148901830-768x768.jpg 768w, img/blog/families-illustration_23-2148901830-375x375.jpg 375w, img/blog/families-illustration_23-2148901830.jpg 826w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h6 fw-600">
+                                            <a href="#">Несколько общих правил, оторым мы советуем следовать при создании контента</a>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="small text-muted">8 июля 2022</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(108, 117, 125, 1);"><path d="M14 12c-1.095 0-2-.905-2-2 0-.354.103-.683.268-.973C12.178 9.02 12.092 9 12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3 1.641 0 3-1.358 3-3 0-.092-.02-.178-.027-.268-.29.165-.619.268-.973.268z"></path><path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path></svg>
+                                                <span class="small text-muted">17</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-blog">
+                                    <div class="card-img-scale">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="512" height="512" src="img/blog/6103779-512x512.jpg" class="card-img-top" alt="" loading="lazy" srcset="img/blog/6103779-512x512.jpg 512w, img/blog/6103779-300x300.jpg 300w, img/blog/6103779.jpg 1024w, img/blog/6103779-150x150.jpg 150w, img/blog/6103779-768x768.jpg 768w, img/blog/6103779-375x375.jpg 375w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h6 fw-600">
+                                            <a href="#">Как привлечь трафик на сайт?</a>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="small text-muted">8 июля 2022</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(108, 117, 125, 1);"><path d="M14 12c-1.095 0-2-.905-2-2 0-.354.103-.683.268-.973C12.178 9.02 12.092 9 12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3 1.641 0 3-1.358 3-3 0-.092-.02-.178-.027-.268-.29.165-.619.268-.973.268z"></path><path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path></svg>
+                                                <span class="small text-muted">35</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card card-blog">
+                                    <div class="card-img-scale">
+                                        <a href="#">
+                                            <!-- Стандартный для WP вывод картинки -->
+                                            <img width="512" height="512" src="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg" class="card-img-top" alt="" loading="lazy" srcset="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg 512w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-300x300.jpg 300w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475.jpg 1024w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-150x150.jpg 150w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-768x768.jpg 768w, https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-375x375.jpg 375w" sizes="(max-width: 512px) 100vw, 512px">
+                                        </a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-title h6 fw-600">
+                                            <a href="#">Праздник День Победы 9 мая</a>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="small text-muted">8 июля 2022</span>
+                                            <div class="d-flex align-items-center">
+                                                <svg class="me-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(108, 117, 125, 1);"><path d="M14 12c-1.095 0-2-.905-2-2 0-.354.103-.683.268-.973C12.178 9.02 12.092 9 12 9a3.02 3.02 0 0 0-3 3c0 1.642 1.358 3 3 3 1.641 0 3-1.358 3-3 0-.092-.02-.178-.027-.268-.29.165-.619.268-.973.268z"></path><path d="M12 5c-7.633 0-9.927 6.617-9.948 6.684L1.946 12l.105.316C2.073 12.383 4.367 19 12 19s9.927-6.617 9.948-6.684l.106-.316-.105-.316C21.927 11.617 19.633 5 12 5zm0 12c-5.351 0-7.424-3.846-7.926-5C4.578 10.842 6.652 7 12 7c5.351 0 7.424 3.846 7.926 5-.504 1.158-2.578 5-7.926 5z"></path></svg>
+                                                <span class="small text-muted">35</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-lg-flex"></div>
+                    <div class="swiper-button-prev d-none d-lg-flex"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section py-5">
+            <div class="container">
+                <div class="overflow-hidden rounded-4 shadow">
+                    <div class="row g-0">
+                        <div class="col-lg-4 bg-dark d-flex align-items-center">
+                            <div class="p-4 p-md-5">
+                                <div class="text-white">
+                                    <h3>Как начать продавать на Wildberries</h3>
+                                    <p>В скором времени «Смешные Цены» запустит серию обучающих роликов. Если вам кажется, что заключить договор с Вайлдберриз - это сложно, просто посмотрите это видео</p>
+                                </div>
+                                <div class="mt-4">
+                                    <!-- Ссылка на рубрику блога «Видео» -->
+                                    <a class="btn btn-primary btn-lg" href="#">Больше видео</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="cta-video bg-img" style="background-image: linear-gradient(rgba(15, 23, 43, 0.1), rgba(15, 23, 43, 0.1)), url(https://smeshnie-ceny.ru/wp-content/themes/ceny-2/img/video.jpg);">
+                                <a class="btn-play" href="https://www.youtube.com/embed/3t9dekbUTt8" data-fancybox="video-gallery">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer border-top pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="text-center text-lg-end">
+                        <ul class="nav justify-content-center justify-content-lg-end">
+                            <li class="nav-item"><a href="#" class="nav-link px-2">Реклама партнёрам</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2">Контакты</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link px-2">Политика безопасности данных</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="d-flex justify-content-center justify-content-lg-start">
+                        <img class="d-inline-block" src="img/logo-ceny-05-150x69-1.png" alt="Logo" title="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-lg-start mt-4">
+                <p class="small">© 2005-
+                    <script>document.write(new Date().getFullYear())</script> Смешные Цены | Официальный сайт.
+                    Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
