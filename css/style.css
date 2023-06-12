@@ -1,6 +1,6 @@
 /*!
 Theme: Smeshnie Ceny
-Author: Andrey Galkin
+Author: Andrey G
 Version: 2.0
 */
 
@@ -92,6 +92,7 @@ Version: 2.0
     --bs-link-hover-color: #cb8112;
     --bs-code-color: #d63384;
     --bs-highlight-bg: #fff3cd;
+    --swiper-theme-color: #fea116;
 }
 
 img {
@@ -146,8 +147,6 @@ img {
 
 /*//////////////////////////////////////////////////////////////////
 [ + TYPOGRAPHY ]*/
-
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {}
 
 /*//////////////////////////////////////////////////////////////////
 [ + LINKS ]*/
@@ -278,22 +277,6 @@ textarea {
     border-right-width: 0 !important;
     border-left-width: 0 !important;
     border-radius: 0 !important;
-}
-
-.icon-hover-toggler .icon-show {
-    display: inline-block;
-}
-
-.icon-hover-toggler .icon-hide {
-    display: none;
-}
-
-.icon-hover-toggler:not(.collapsed) .icon-show {
-    display: none;
-}
-
-.icon-hover-toggler:not(.collapsed) .icon-hide {
-    display: inline-block;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -435,6 +418,13 @@ textarea {
     --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
 
+.offcanvas-search {
+    --bs-offcanvas-height: auto;
+    --bs-offcanvas-padding-x: 1rem;
+    --bs-offcanvas-padding-y: 1rem;
+    bottom: auto;
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ + FOOTER ]*/
 
@@ -447,9 +437,9 @@ textarea {
 [ Modal ]*/
 
 .modal {
-    --bs-modal-padding: 0 1.5rem 2.5rem;
+    --bs-modal-padding: 1.5rem;
     --bs-modal-header-border-width: 0;
-    --bs-modal-header-padding: 1.5rem 1.5rem 0;
+    --bs-modal-header-padding: 1.5rem;
     --bs-modal-border-width: 0;
     --bs-modal-border-radius: 0.375rem;
 }
@@ -467,10 +457,10 @@ textarea {
     --bs-card-title-spacer-y: 0.5rem;
     --bs-card-border-width: 1px;
     --bs-card-border-color: var(--bs-border-color-translucent);
-    --bs-card-border-radius: 0.75rem;
+    --bs-card-border-radius: 1rem;
     --bs-card-box-shadow: ;
-    --bs-card-inner-border-radius: calc(0.75rem - 1px);
-    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-inner-border-radius: calc(1rem - 1px);
+    --bs-card-cap-padding-y: 1rem;
     --bs-card-cap-padding-x: 1rem;
     --bs-card-cap-bg: transparent;
     --bs-card-cap-color: ;
@@ -482,57 +472,60 @@ textarea {
     word-wrap: normal;
 }
 
-.card.card-blog {
-    --bs-card-title-spacer-y: 0;
+.card-title {
+    --bs-link-color: #212529;
+    --bs-link-hover-color: #fea116;
 }
 
-.card.card-blog .card-body {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.card.card-magazin .card-body {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.card.card-magazin .category-logo {
-    position: relative;
-    margin-top: -2rem;
-    z-index: 5;
-}
-
-.hover-scale-img {
+.card-img-scale {
     overflow: hidden;
 }
 
-.hover-scale-img > img {
+.card-img-scale img {
     transform: scale(1);
     transition: transform 0.3s ease;
 }
 
-.hover-scale-img:hover > img {
+.card-img-scale:hover img {
     transform: scale(1.05);
+}
+
+.card-blog {
+    --bs-card-title-spacer-y: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-blog .card-body {
+    border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.card-magazin {
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-magazin .card-body {
+    border-top: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+.card-magazin .meta-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: .875em;
+    color: #6c757d;
+}
+
+.card-magazin .meta-wrapper>*:before {
+    content: "•";
+    color: inherit;
+    padding-left: 0.5rem;
+    padding-right: 0.75rem;
+    opacity: 0.8;
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ + UI ELEMENTS ]*/
-
-.accordion {
-    --bs-accordion-border-width: 0;
-    --bs-accordion-border-radius: 0;
-    --bs-accordion-inner-border-radius: 0;
-    --bs-accordion-btn-padding-x: 1.25rem;
-    --bs-accordion-btn-padding-y: 1rem;
-    --bs-accordion-btn-color: #120e1e;
-    --bs-accordion-btn-bg: transparent;
-    --bs-accordion-btn-icon: url(../img/faq-plus.svg);
-    --bs-accordion-btn-icon-width: 1.5rem;
-    --bs-accordion-btn-active-icon: url(../img/faq-plus.svg);
-    --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-body-padding-x: 1.25rem;
-    --bs-accordion-body-padding-y: 1rem;
-    --bs-accordion-active-color: #120e1e;
-    --bs-accordion-active-bg: transparent;
-}
 
 /*------------------------------------------------------------------
 [ Swiper ]*/
@@ -540,16 +533,16 @@ textarea {
 .swiper {
     --swiper-navigation-size: 50px;
     --swiper-navigation-after-size: 20px;
-    --swiper-theme-color: #fea116;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     width: var(--swiper-navigation-size);
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 2px 3px 1px rgb(0 0 0 / 15%);
     color: #fea116;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px 1px rgb(0 0 0 / 15%);
+    background-color: #fff;
+    z-index: 1;
 }
 
 .swiper-button-next {
@@ -572,6 +565,11 @@ textarea {
     opacity: 0.35;
 }
 
+.swiper-pagination {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
 .swiper-pagination-bullet {
     --swiper-pagination-bullet-width: 16px;
     --swiper-pagination-bullet-height: 4px;
@@ -586,16 +584,27 @@ textarea {
     --swiper-pagination-color: var(--swiper-theme-color);
 }
 
-.swiper.navigation-outside~.swiper-button-prev {
+.swiper-navigation-outside .swiper-button-prev {
     left: -50px;
 }
 
-.swiper.navigation-outside~.swiper-button-next {
+.swiper-navigation-outside .swiper-button-next {
     right: -50px;
+}
+
+.magazinSwiper .swiper-slide {
+    height: auto;
+}
+
+.blogSwiper .swiper-slide {
+    height: auto;
 }
 
 /*//////////////////////////////////////////////////////////////////
 [ + SECTIONS ]*/
+
+/*------------------------------------------------------------------
+[ section-sidebar ]*/
 
 .sidebar-container {
     height: 100%;
@@ -718,10 +727,6 @@ textarea {
     opacity: .65;
 }
 
-.hover-rotate:hover {
-    transform: rotate(-15deg);
-}
-
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
@@ -755,6 +760,6 @@ textarea {
 
 @media (min-width: 1920px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-        max-width: 1500px;
+        max-width: 1600px;
     }
 }

@@ -10,20 +10,20 @@ window.onscroll = function() {
 }
 
 const blogSwiper = new Swiper('.blogSwiper', {
-    slidesPerView: 1.05,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 16,
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.blogSwiper-container .swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '#blogSwiper-next',
-        prevEl: '#blogSwiper-prev',
+        nextEl: '.blogSwiper-container .swiper-button-next',
+        prevEl: '.blogSwiper-container .swiper-button-prev',
     },
     breakpoints: {
         768: {
@@ -39,20 +39,20 @@ const blogSwiper = new Swiper('.blogSwiper', {
 });
 
 const magazinSwiper = new Swiper('.magazinSwiper', {
-    slidesPerView: 1.05,
-    loop: true,
-    grabCursor: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 16,
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.magazinSwiper-container .swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '#magazinSwiper-next',
-        prevEl: '#magazinSwiper-prev',
+        nextEl: '.magazinSwiper-container .swiper-button-next',
+        prevEl: '.magazinSwiper-container .swiper-button-prev',
     },
     breakpoints: {
         768: {
