@@ -68,5 +68,14 @@ const magazinSwiper = new Swiper('.magazinSwiper', {
 });
 
 Fancybox.bind("[data-fancybox]", {
-    // Your custom options
+    Thumbs: {
+        type: "classic",
+    },
+    Toolbar: {
+        display: {
+          left: [],
+          middle: [],
+          right: ["close"],
+        },
+    },
 });
