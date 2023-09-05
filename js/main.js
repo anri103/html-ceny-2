@@ -1,29 +1,36 @@
+//////////////////////////////////////////////////////////////////
+// [ Fixed header ]
+
 window.onscroll = function() {
     const windowScroll = window.scrollY;
-	const fixedMenu = document.querySelector('.sticky-heading');
+	const fixedMenu = document.querySelector('.fixed-header');
     if (windowScroll > 200) {
-        fixedMenu.classList.add('shadow-sm');
+        fixedMenu.classList.add('js-header');
     }
     else {
-        fixedMenu.classList.remove('shadow-sm');
+        fixedMenu.classList.remove('js-header');
     }
 }
+
+//////////////////////////////////////////////////////////////////
+// [ Swiper Sliders ]
 
 const blogSwiper = new Swiper('.blogSwiper', {
     slidesPerView: 1,
     loop: false,
     spaceBetween: 16,
+    grabCursor: true,
     // autoplay: {
     //     delay: 3500,
     //     disableOnInteraction: false,
     // },
     pagination: {
-        el: '.blogSwiper-container .swiper-pagination',
+        el: '.swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '.blogSwiper-container .swiper-button-next',
-        prevEl: '.blogSwiper-container .swiper-button-prev',
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
     },
     breakpoints: {
         768: {
@@ -33,7 +40,7 @@ const blogSwiper = new Swiper('.blogSwiper', {
             slidesPerView: 3,
         },
         1200: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
     },
 });
@@ -42,17 +49,18 @@ const magazinSwiper = new Swiper('.magazinSwiper', {
     slidesPerView: 1,
     loop: false,
     spaceBetween: 16,
+    grabCursor: true,
     // autoplay: {
     //     delay: 3500,
     //     disableOnInteraction: false,
     // },
     pagination: {
-        el: '.magazinSwiper-container .swiper-pagination',
+        el: '.swiper-pagination',
         clickable: true,
     },
     navigation: {
-        nextEl: '.magazinSwiper-container .swiper-button-next',
-        prevEl: '.magazinSwiper-container .swiper-button-prev',
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
     },
     breakpoints: {
         768: {
@@ -66,6 +74,24 @@ const magazinSwiper = new Swiper('.magazinSwiper', {
         },
     },
 });
+
+const gallerySwiper = new Swiper('.gallerySwiper', {
+    slidesPerView: 1,
+    loop: false,
+    spaceBetween: 16,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+    },
+});
+
+//////////////////////////////////////////////////////////////////
+// [ Enable Fancybox ]
 
 Fancybox.bind("[data-fancybox]", {
     Thumbs: {
