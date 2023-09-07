@@ -111,39 +111,8 @@
                         <h1 class="section-title">Смешные Цены карта магазинов</h1>
                     </div>
                     <div class="row gy-4">
-                        <!-- Колонка с рекламой -->
-                        <div class="col-lg-4 order-lg-2">
-                            <div class="sidebar sidebar-right">
-                                <div class="sidebar-widget">
-                                    <form class="search-form" action="#">
-                                        <input type="text" class="form-control" placeholder="Поиск по сайту">
-                                        <div class="position-absolute top-50 end-0 translate-middle-y d-flex gap-3 align-items-center">
-                                            <button type="submit" class="btn p-1 border-0">
-                                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="sidebar-widget">
-                                    <p class="widegt-title">Рубрики</p>
-                                    <nav class="nav">
-                                        <a href="#" class="nav-link">Новости</a>
-                                        <a href="#" class="nav-link">Статьи</a>
-                                        <a href="#" class="nav-link">Акции</a>
-                                        <a href="#" class="nav-link">Товары недели</a>
-                                    </nav>
-                                </div>
-                                <div class="sidebar-widget ad-widget">
-                                    <!-- Здесь код рекламы -->
-                                    <img class="img-fluid" src="img/ya-ad-side.png" alt="">
-                                </div>
-                            </div>
-                        </div>
                         <!-- Колонка с контентом -->
-                        <div class="col-lg-8 order-lg-1">
-
+                        <div class="col-lg-8">
                             <!-- В этот контейнер выводим контент страницы -->
                             <div class="page-content">
                                 <p><img src="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/karta-150x150.png" alt="" width="150" height="150" class="alignleft size-thumbnail wp-image-51" srcset="https://smeshnie-ceny.ru/wp-content/uploads/2018/02/karta-150x150.png 150w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/karta-100x100.png 100w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/karta-160x160.png 160w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/karta-320x320.png 320w, https://smeshnie-ceny.ru/wp-content/uploads/2018/02/karta.png 250w" sizes="(max-width: 150px) 100vw, 150px" /></p>
@@ -162,6 +131,10 @@
                                 <p>Ближайший магазин «Смешные цены» можно найти на <strong>данной карте.</strong></p>
 
                                 <h2 id="spisok-magazinov">Список магазинов в Москве</h2>
+
+                                <div class="my-4">
+                                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa3da9dc0fe39efaf75b036136f32f14a21a1a9edaa648090e578187b0fb1da8a&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+                                </div>
 
                                 <div class="table-responsive">
                                     <table class="table">
@@ -590,10 +563,37 @@
                                     </table>
                                 </div>
 
-                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa3da9dc0fe39efaf75b036136f32f14a21a1a9edaa648090e578187b0fb1da8a&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
-
                             </div>
-
+                        </div>
+                        <!-- Колонка с рекламой -->
+                        <div class="col-lg-4">
+                            <div class="sidebar sidebar-right">
+                                <div class="sidebar-widget">
+                                    <form class="search-form" action="#">
+                                        <input type="text" class="form-control" placeholder="Поиск по сайту">
+                                        <div class="position-absolute top-50 end-0 translate-middle-y d-flex gap-3 align-items-center">
+                                            <button type="submit" class="btn p-1 border-0">
+                                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="sidebar-widget">
+                                    <p class="widegt-title">Рубрики</p>
+                                    <nav class="nav">
+                                        <a href="#" class="nav-link">Новости</a>
+                                        <a href="#" class="nav-link">Статьи</a>
+                                        <a href="#" class="nav-link">Акции</a>
+                                        <a href="#" class="nav-link">Товары недели</a>
+                                    </nav>
+                                </div>
+                                <div class="sidebar-widget ad-widget">
+                                    <!-- Здесь код рекламы -->
+                                    <img class="img-fluid" src="img/ya-ad-side.png" alt="">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
