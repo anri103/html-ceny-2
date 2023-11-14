@@ -27,13 +27,15 @@
                         <button type="button" class="search-toggler mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
                         </button>
-                        <a class="site-brand hover-opacity" href="#">
-                            <img class="site-logo" src="img/logo-ceny-05-150x69-1.png" alt="SC Logo" title="SC Logo">
+                        <div class="site-brand">
+                            <a class="custom-logo-link" href="index.html">
+                                <img class="custom-logo" src="img/logo-ceny-05-150x69-1.png" alt="SC Logo" title="SC Logo">
+                            </a>
                             <div class="site-heading">
                                 <div class="site-title">Смешные Цены</div>
                                 <div class="site-description">Официальный сайт</div>
                             </div>
-                        </a>
+                        </div>
                         <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
                             <div></div>
                             <div></div>
@@ -41,11 +43,19 @@
                         </button>
                         <nav class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="#">Каталог</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Магазины на карте</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Акции</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Новости</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+                                <li><a href="index.html">Главная</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#!">Каталог</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Пункт раз</a></li>
+                                        <li><a href="#">Ещё один пункт</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="page.html">Магазины на карте</a></li>
+                                <li><a href="archive.html">Акции</a></li>
+                                <li><a href="archive.html">Новости</a></li>
+                                <li><a href="page.html">Контакты</a></li>
                             </ul>
                         </nav>
                         <button type="button" class="search-toggler desktop" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
@@ -97,7 +107,7 @@
                 <div class="container">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><span>Страница</span></li>
                         </ol>
                     </nav>
@@ -117,7 +127,7 @@
                                 <h1 class="display-1">404</h1>
                                 <p class="section-description">Страница не найдена</p>
                                 <p class="mb-4">По данному адресу нет страницы либо она была удалена.</p>
-                                <a class="btn btn-primary" href="/">На главную</a>
+                                <a class="btn btn-primary" href="index.html">На главную</a>
                             </div>
                         </div>
                         <!-- Колонка с рекламой -->
@@ -138,10 +148,10 @@
                                 <div class="sidebar-widget">
                                     <p class="widegt-title">Рубрики</p>
                                     <nav class="nav">
-                                        <a href="#" class="nav-link">Новости</a>
-                                        <a href="#" class="nav-link">Статьи</a>
-                                        <a href="#" class="nav-link">Акции</a>
-                                        <a href="#" class="nav-link">Товары недели</a>
+                                        <a href="archive.html" class="nav-link">Новости</a>
+                                        <a href="archive.html" class="nav-link">Статьи</a>
+                                        <a href="archive.html" class="nav-link">Акции</a>
+                                        <a href="archive.html" class="nav-link">Товары недели</a>
                                     </nav>
                                 </div>
                                 <div class="sidebar-widget ad-widget">
