@@ -25,7 +25,7 @@
                 <div class="navbar navbar-expand-lg">
                     <div class="container">
                         <button type="button" class="search-toggler mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                            <svg width="24" height="24" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#000000"></path></svg>
                         </button>
                         <div class="site-brand">
                             <span class="custom-logo-link">
@@ -36,7 +36,7 @@
                                 <div class="site-description">Официальный сайт</div>
                             </div>
                         </div>
-                        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                        <button type="button" class="nav-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
                             <div></div>
                             <div></div>
                             <div></div>
@@ -105,18 +105,6 @@
         </section>
 
         <main class="main">
-
-            <!-- Хлебные крошки -->
-            <section class="section section-breadcrumbs">
-                <div class="container">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><span>Страница</span></li>
-                        </ol>
-                    </nav>
-                </div>
-            </section>
     
             <!-- main-content -->
             <section class="section">
@@ -254,7 +242,7 @@
                     </div>
                 </div>
             </section>
-    
+            
             <!-- magazin-slider -->
             <section class="section">
                 <div class="container">
@@ -266,270 +254,274 @@
                             <img class="img-fluid" src="img/map.png" alt="Магазины Смешные Цены в Москве">
                         </a>
                     </div>
-                    <!-- Выводить последние 10 постов -->
-                    <div class="swiper magazinSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <article class="card card-magazin">
-                                    <a class="card-img-scale" href="single-magazin.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single-magazin.html">«Смешные Цены» на Планерной</a>
-                                        </p>
-                                        <div class="card-meta">
-                                            <span class="meta-metro">Планерная</span>
-                                            <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                    <div class="position-relative">
+                        <!-- Выводить последние 10 постов -->
+                        <div class="swiper magazinSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <article class="card card-magazin">
+                                        <a class="card-img-scale" href="single-magazin.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single-magazin.html">«Смешные Цены» на Планерной</a>
+                                            </p>
+                                            <div class="card-meta">
+                                                <span class="meta-metro">Планерная</span>
+                                                <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-magazin">
-                                    <a class="card-img-scale" href="single-magazin.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single-magazin.html">«Смешные Цены» на Авиамоторной</a>
-                                        </p>
-                                        <div class="card-meta">
-                                            <span class="meta-metro">Планерная</span>
-                                            <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-magazin">
+                                        <a class="card-img-scale" href="single-magazin.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single-magazin.html">«Смешные Цены» на Авиамоторной</a>
+                                            </p>
+                                            <div class="card-meta">
+                                                <span class="meta-metro">Планерная</span>
+                                                <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-magazin">
-                                    <a class="card-img-scale" href="single-magazin.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single-magazin.html">«Смешные Цены» на Планерной</a>
-                                        </p>
-                                        <div class="card-meta">
-                                            <span class="meta-metro">Планерная</span>
-                                            <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-magazin">
+                                        <a class="card-img-scale" href="single-magazin.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single-magazin.html">«Смешные Цены» на Планерной</a>
+                                            </p>
+                                            <div class="card-meta">
+                                                <span class="meta-metro">Планерная</span>
+                                                <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-magazin">
-                                    <a class="card-img-scale" href="single-magazin.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single-magazin.html">«Смешные Цены» на Авиамоторной</a>
-                                        </p>
-                                        <div class="card-meta">
-                                            <span class="meta-metro">Планерная</span>
-                                            <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-magazin">
+                                        <a class="card-img-scale" href="single-magazin.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single-magazin.html">«Смешные Цены» на Авиамоторной</a>
+                                            </p>
+                                            <div class="card-meta">
+                                                <span class="meta-metro">Планерная</span>
+                                                <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-magazin">
-                                    <a class="card-img-scale" href="single-magazin.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single-magazin.html">«Смешные Цены» на Планерной</a>
-                                        </p>
-                                        <div class="card-meta">
-                                            <span class="meta-metro">Планерная</span>
-                                            <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-magazin">
+                                        <a class="card-img-scale" href="single-magazin.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single-magazin.html">«Смешные Цены» на Планерной</a>
+                                            </p>
+                                            <div class="card-meta">
+                                                <span class="meta-metro">Планерная</span>
+                                                <span class="meta-address">Москва, Планерная улица, 7к1</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-magazin">
-                                    <a class="card-img-scale" href="single-magazin.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single-magazin.html">«Смешные Цены» на Авиамоторной</a>
-                                        </p>
-                                        <div class="card-meta">
-                                            <span class="meta-metro">Планерная</span>
-                                            <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-magazin">
+                                        <a class="card-img-scale" href="single-magazin.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="500" height="400" src="img/magazin/ba10a93428488789f668e3c751d69212.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-badge badge text-bg-dark rounded-pill">Смешные Цены</div>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single-magazin.html">«Смешные Цены» на Авиамоторной</a>
+                                            </p>
+                                            <div class="card-meta">
+                                                <span class="meta-metro">Планерная</span>
+                                                <span class="meta-address">Москва, Самое длинное название улицы, 107к1</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
+                                    </article>
+                                </div>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <button type="button" class="swiper-next"></button>
-                        <button type="button" class="swiper-prev"></button>
-                        <div class="swiper-pagination"></div>
+                        <button type="button" class="magazinSwiper-next swiper-next outside-next"></button>
+                        <button type="button" class="magazinSwiper-prev swiper-prev outside-prev"></button>
                     </div>
                 </div>
             </section>
     
             <!-- blog-slider -->
-            <section class="section">
+            <section class="section overflow-hidden">
                 <div class="container">
                     <div class="section-heading">
                         <h2 class="section-title">Наши новости</h2>
                     </div>
-                    <!-- Выводить последние 10 постов -->
-                    <div class="swiper blogSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <article class="card card-blog">
-                                    <a class="card-img-scale" href="single.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="512" height="512" src="img/blog/families-illustration_23-2148901830-512x512.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single.html">Несколько общих правил, оторым мы советуем следовать при создании контента</a>
-                                        </p>
-                                        <div class="card-excerpt">
-                                            <p>Поздравляем с Днем Знаний! Желаем школьникам и преподавателям массу увлекательных уроков и интересных открытий. Пусть наш маркетплейс станет надежным помощником в поиске нужных учебных материалов и развитии</p>
+                    <div class="position-relative">
+                        <!-- Выводить последние 10 постов -->
+                        <div class="swiper blogSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <article class="card card-blog">
+                                        <a class="card-img-scale" href="single.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="512" height="512" src="img/blog/families-illustration_23-2148901830-512x512.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single.html">Несколько общих правил, оторым мы советуем следовать при создании контента</a>
+                                            </p>
+                                            <div class="card-excerpt">
+                                                <p>Поздравляем с Днем Знаний! Желаем школьникам и преподавателям массу увлекательных уроков и интересных открытий. Пусть наш маркетплейс станет надежным помощником в поиске нужных учебных материалов и развитии</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta">
-                                            <span class="meta-data">8 июля 2022</span>
-                                            <span class="meta-views">17</span>
+                                        <div class="card-footer">
+                                            <div class="card-meta">
+                                                <span class="meta-data">8 июля 2022</span>
+                                                <span class="meta-views">17</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </article>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-blog">
+                                        <a class="card-img-scale" href="single.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="512" height="512" src="img/blog/6103779-512x512.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single.html">Как привлечь трафик на сайт?</a>
+                                            </p>
+                                            <div class="card-excerpt">
+                                                <p>С Днем Знаний! Желаем всем ученикам и учителям ярких открытий, вдохновения и успехов в обучении. Пусть каждый день на нашем маркетплейсе будет полон новых знаний</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta">
+                                                <span class="meta-data">8 июля 2022</span>
+                                                <span class="meta-views">17</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-blog">
+                                        <a class="card-img-scale" href="single.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="512" height="512" src="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single.html">Праздник День Победы 9 мая</a>
+                                            </p>
+                                            <div class="card-excerpt">
+                                                <p>Поздравляем с Днем Знаний! Желаем школьникам и преподавателям массу увлекательных уроков и интересных открытий. Пусть наш маркетплейс станет надежным помощником в поиске нужных учебных материалов и развитии</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta">
+                                                <span class="meta-data">8 июля 2022</span>
+                                                <span class="meta-views">17</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-blog">
+                                        <a class="card-img-scale" href="single.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="512" height="512" src="img/blog/families-illustration_23-2148901830-512x512.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single.html">Несколько общих правил, оторым мы советуем следовать при создании контента</a>
+                                            </p>
+                                            <div class="card-excerpt">
+                                                <p>С Днем Знаний! Желаем всем ученикам и учителям ярких открытий, вдохновения и успехов в обучении. Пусть каждый день на нашем маркетплейсе будет полон новых знаний</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta">
+                                                <span class="meta-data">8 июля 2022</span>
+                                                <span class="meta-views">17</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-blog">
+                                        <a class="card-img-scale" href="single.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="512" height="512" src="img/blog/6103779-512x512.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single.html">Как привлечь трафик на сайт?</a>
+                                            </p>
+                                            <div class="card-excerpt">
+                                                <p>Поздравляем с Днем Знаний! Желаем школьникам и преподавателям массу увлекательных уроков и интересных открытий. Пусть наш маркетплейс станет надежным помощником в поиске нужных учебных материалов и развитии</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta">
+                                                <span class="meta-data">8 июля 2022</span>
+                                                <span class="meta-views">17</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <article class="card card-blog">
+                                        <a class="card-img-scale" href="single.html">
+                                            <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
+                                            <img width="512" height="512" src="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg" class="card-img-top" alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <p class="card-title">
+                                                <a href="single.html">Праздник День Победы 9 мая</a>
+                                            </p>
+                                            <div class="card-excerpt">
+                                                <p>С Днем Знаний! Желаем всем ученикам и учителям ярких открытий, вдохновения и успехов в обучении. Пусть каждый день на нашем маркетплейсе будет полон новых знаний</p>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="card-meta">
+                                                <span class="meta-data">8 июля 2022</span>
+                                                <span class="meta-views">17</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <article class="card card-blog">
-                                    <a class="card-img-scale" href="single.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="512" height="512" src="img/blog/6103779-512x512.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single.html">Как привлечь трафик на сайт?</a>
-                                        </p>
-                                        <div class="card-excerpt">
-                                            <p>С Днем Знаний! Желаем всем ученикам и учителям ярких открытий, вдохновения и успехов в обучении. Пусть каждый день на нашем маркетплейсе будет полон новых знаний</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta">
-                                            <span class="meta-data">8 июля 2022</span>
-                                            <span class="meta-views">17</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-blog">
-                                    <a class="card-img-scale" href="single.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="512" height="512" src="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single.html">Праздник День Победы 9 мая</a>
-                                        </p>
-                                        <div class="card-excerpt">
-                                            <p>Поздравляем с Днем Знаний! Желаем школьникам и преподавателям массу увлекательных уроков и интересных открытий. Пусть наш маркетплейс станет надежным помощником в поиске нужных учебных материалов и развитии</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta">
-                                            <span class="meta-data">8 июля 2022</span>
-                                            <span class="meta-views">17</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-blog">
-                                    <a class="card-img-scale" href="single.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="512" height="512" src="img/blog/families-illustration_23-2148901830-512x512.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single.html">Несколько общих правил, оторым мы советуем следовать при создании контента</a>
-                                        </p>
-                                        <div class="card-excerpt">
-                                            <p>С Днем Знаний! Желаем всем ученикам и учителям ярких открытий, вдохновения и успехов в обучении. Пусть каждый день на нашем маркетплейсе будет полон новых знаний</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta">
-                                            <span class="meta-data">8 июля 2022</span>
-                                            <span class="meta-views">17</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-blog">
-                                    <a class="card-img-scale" href="single.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="512" height="512" src="img/blog/6103779-512x512.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single.html">Как привлечь трафик на сайт?</a>
-                                        </p>
-                                        <div class="card-excerpt">
-                                            <p>Поздравляем с Днем Знаний! Желаем школьникам и преподавателям массу увлекательных уроков и интересных открытий. Пусть наш маркетплейс станет надежным помощником в поиске нужных учебных материалов и развитии</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta">
-                                            <span class="meta-data">8 июля 2022</span>
-                                            <span class="meta-views">17</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="card card-blog">
-                                    <a class="card-img-scale" href="single.html">
-                                        <!-- Вставить стандартный для WP вывод картинки (the_post_thumbnail) -->
-                                        <img width="512" height="512" src="https://smeshnie-ceny.ru/wp-content/uploads/2022/07/5166475-512x512.jpg" class="card-img-top" alt="">
-                                    </a>
-                                    <div class="card-body">
-                                        <p class="card-title">
-                                            <a href="single.html">Праздник День Победы 9 мая</a>
-                                        </p>
-                                        <div class="card-excerpt">
-                                            <p>С Днем Знаний! Желаем всем ученикам и учителям ярких открытий, вдохновения и успехов в обучении. Пусть каждый день на нашем маркетплейсе будет полон новых знаний</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="card-meta">
-                                            <span class="meta-data">8 июля 2022</span>
-                                            <span class="meta-views">17</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <button type="button" class="swiper-next"></button>
-                        <button type="button" class="swiper-prev"></button>
-                        <div class="swiper-pagination"></div>
+                        <button type="button" class="blogSwiper-next swiper-next outside-next"></button>
+                        <button type="button" class="blogSwiper-prev swiper-prev outside-prev"></button>
                     </div>
                 </div>
             </section>
@@ -537,10 +529,11 @@
             <!-- section-cta-video -->
             <section class="section section-cta-video">
                 <div class="container">
-                    <div class="overflow-hidden rounded-4 bg-dark shadow">
-                        <div class="row align-items-center">
-                            <div class="col-lg-5">
-                                <div class="p-4 p-lg-5">
+                    <div class="position-relative overflow-hidden rounded-4 bg-dark shadow p-4 p-lg-5">
+                        <img class="section-bg-icon" src="img/tv-svgrepo-com.svg" alt="УТП фоновая картинка">
+                        <div class="position-relative">
+                            <div class="row gy-4 align-items-center">
+                                <div class="col-lg-6 col-xl-5">
                                     <div class="text-white">
                                         <p class="h3 section-title">Как начать продавать на Wildberries</p>
                                         <p class="section-description">В скором времени «Смешные Цены» запустит серию обучающих роликов. Если вам кажется, что заключить договор с Вайлдберриз - это сложно, просто посмотрите это видео</p>
@@ -550,19 +543,19 @@
                                         <a class="btn btn-primary btn-lg" href="archive-videos.html">Больше видео</a>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="cta-video">
-                                    <img class="cta-video-cover img-fluid" src="img/video.jpg" alt="Как продавать на Wildberries">
-                                    <a class="btn-play" href="https://www.youtube.com/embed/3t9dekbUTt8" data-fancybox="video-gallery">
-                                        <svg class="position-relative" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g stroke-width="0"/>
-                                            <g stroke-linecap="round" stroke-linejoin="round"/>
-                                            <g>
-                                                <path d="M8.286 3.407A1.5 1.5 0 0 0 6 4.684v14.632a1.5 1.5 0 0 0 2.286 1.277l11.888-7.316a1.5 1.5 0 0 0 0-2.555L8.286 3.407z" fill="#ffffff"/>
-                                            </g>
-                                        </svg>
-                                    </a>
+                                <div class="col-lg-6 col-xl-7">
+                                    <div class="cta-video">
+                                        <img class="cta-video-cover img-fluid" src="img/video.jpg" alt="Как продавать на Wildberries">
+                                        <a class="btn-play" href="https://www.youtube.com/embed/3t9dekbUTt8" data-fancybox="video-gallery">
+                                            <svg class="position-relative" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g stroke-width="0"/>
+                                                <g stroke-linecap="round" stroke-linejoin="round"/>
+                                                <g>
+                                                    <path d="M8.286 3.407A1.5 1.5 0 0 0 6 4.684v14.632a1.5 1.5 0 0 0 2.286 1.277l11.888-7.316a1.5 1.5 0 0 0 0-2.555L8.286 3.407z" fill="#ffffff"/>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -578,23 +571,42 @@
                     <div class="col-md-6 col-lg-3 order-lg-2">
                         <div class="footer-widget">
                             <p class="widegt-title">Полезные ссылки</p>
-                            <nav class="nav">
-                                <a href="#" class="nav-link">Каталог</a>
-                                <a href="#" class="nav-link">Магазины на карте</a>
-                                <a href="#" class="nav-link">Акции</a>
-                                <a href="#" class="nav-link">Новости</a>
-                                <a href="#" class="nav-link">Контакты</a>
-                            </nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="nav-link underline">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Магазины на карте</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Контакты</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Какой-то длинный пункт меню для заполнения</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 order-lg-3">
                         <div class="footer-widget">
                             <p class="widegt-title">Контактная информация</p>
-                            <nav class="nav">
-                                <a href="#" class="nav-link">Реклама партнёрам</a>
-                                <a href="#" class="nav-link">Условия использования</a>
-                                <a href="#" class="nav-link">Политика безопасности данных</a>
-                            </nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="nav-link underline">Реклама партнёрам</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Условия использования</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Политика безопасности данных</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1">

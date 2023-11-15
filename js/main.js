@@ -17,7 +17,7 @@ window.onscroll = function() {
 
 const blogSwiper = new Swiper('.blogSwiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     spaceBetween: 16,
     grabCursor: true,
     // autoplay: {
@@ -29,8 +29,8 @@ const blogSwiper = new Swiper('.blogSwiper', {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
+        nextEl: '.blogSwiper-next',
+        prevEl: '.blogSwiper-prev',
     },
     breakpoints: {
         768: {
@@ -47,7 +47,7 @@ const blogSwiper = new Swiper('.blogSwiper', {
 
 const magazinSwiper = new Swiper('.magazinSwiper', {
     slidesPerView: 1,
-    loop: false,
+    loop: true,
     spaceBetween: 16,
     grabCursor: true,
     // autoplay: {
@@ -59,8 +59,8 @@ const magazinSwiper = new Swiper('.magazinSwiper', {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
+        nextEl: '.magazinSwiper-next',
+        prevEl: '.magazinSwiper-prev',
     },
     breakpoints: {
         768: {

@@ -25,7 +25,7 @@
                 <div class="navbar navbar-expand-lg">
                     <div class="container">
                         <button type="button" class="search-toggler mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                            <svg width="24" height="24" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#000000"></path></svg>
                         </button>
                         <div class="site-brand">
                             <a class="custom-logo-link" href="index.html">
@@ -36,7 +36,7 @@
                                 <div class="site-description">Официальный сайт</div>
                             </div>
                         </div>
-                        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                        <button type="button" class="nav-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
                             <div></div>
                             <div></div>
                             <div></div>
@@ -70,22 +70,24 @@
         <div class="offcanvas offcanvas-top offcanvas-search" id="offcanvas-search" tabindex="-1">
             <div class="offcanvas-body">
                 <div class="container">
-                    <form class="search-form" action="#">
-                        <input type="text" class="form-control" placeholder="Поиск по сайту">
-                        <div class="position-absolute top-50 end-0 translate-middle-y d-flex gap-3 align-items-center">
-                            <button type="submit" class="btn p-1 border-0">
-                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
-                                </svg>
-                            </button>
-                            <button type="button" class="btn p-1 border-0" data-bs-dismiss="offcanvas">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L24 24" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M1 24L24 1" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
+                    <div class="d-flex gap-3 align-items-center">
+                        <form class="search-form" action="#">
+                            <input type="text" class="form-control" placeholder="Поиск по сайту">
+                            <div class="position-absolute top-50 end-0 translate-middle-y d-flex gap-3 align-items-center">
+                                <button type="submit" class="btn p-1 border-0">
+                                    <svg width="30" height="30" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <button type="button" class="btn p-1 border-0" data-bs-dismiss="offcanvas">
+                            <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L24 24" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 24L24 1" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -262,23 +264,42 @@
                     <div class="col-md-6 col-lg-3 order-lg-2">
                         <div class="footer-widget">
                             <p class="widegt-title">Полезные ссылки</p>
-                            <nav class="nav">
-                                <a href="#" class="nav-link">Каталог</a>
-                                <a href="#" class="nav-link">Магазины на карте</a>
-                                <a href="#" class="nav-link">Акции</a>
-                                <a href="#" class="nav-link">Новости</a>
-                                <a href="#" class="nav-link">Контакты</a>
-                            </nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="nav-link underline">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Магазины на карте</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Контакты</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Какой-то длинный пункт меню для заполнения</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 order-lg-3">
                         <div class="footer-widget">
                             <p class="widegt-title">Контактная информация</p>
-                            <nav class="nav">
-                                <a href="#" class="nav-link">Реклама партнёрам</a>
-                                <a href="#" class="nav-link">Условия использования</a>
-                                <a href="#" class="nav-link">Политика безопасности данных</a>
-                            </nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="nav-link underline">Реклама партнёрам</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Условия использования</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Политика безопасности данных</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1">

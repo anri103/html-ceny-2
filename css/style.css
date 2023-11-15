@@ -889,6 +889,14 @@ textarea {
     background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-100.000000, -6599.000000)' fill='%23fff'%3E%3Cg transform='translate(56.000000, 160.000000)'%3E%3Cpath d='M52.87975,6458.70724 C53.27075,6459.09759 53.90375,6459.09759 54.29375,6458.70724 C54.68475,6458.3169 54.68475,6457.68497 54.29375,6457.29563 L47.85375,6450.86648 C47.53875,6450.55201 47.76175,6450.01491 48.20675,6450.01491 L62.99975,6450.01491 C63.55175,6450.01491 63.99975,6449.55868 63.99975,6449.00761 L63.99975,6449.00362 C63.99975,6448.45255 63.55175,6448.01828 62.99975,6448.01828 L48.20675,6448.01828 C47.76175,6448.01828 47.53875,6447.48019 47.85375,6447.16572 L54.32475,6440.70462 C54.71575,6440.31428 54.71575,6439.68235 54.32475,6439.29201 L54.32475,6439.29201 C53.93475,6438.90266 53.30175,6438.90266 52.91075,6439.29201 L44.58575,6447.60398 C43.80475,6448.38367 43.80475,6449.64753 44.58575,6450.42722 C44.78875,6450.62987 53.04075,6458.86797 52.87975,6458.70724'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+.outside-next {
+    right: -10px;
+}
+
+.outside-prev {
+    left: -10px;
+}
+
 .swiper-button-disabled {
     opacity: 0.15;
 }
@@ -922,6 +930,17 @@ textarea {
 
 .blogSwiper .swiper-slide {
     height: auto;
+}
+
+@media (min-width: 992px) {
+
+    .outside-next {
+        right: -28px;
+    }
+    
+    .outside-prev {
+        left: -28px;
+    }
 }
 
 /*------------------------------------------------------------------
@@ -969,8 +988,23 @@ textarea {
 /*------------------------------------------------------------------
 [ section-cta-video ]*/
 
+.section-cta-video .section-bg-icon {
+    position: absolute;
+    display: block;
+    width: 375px;
+    height: auto;
+    bottom: -100px;
+    left: -50px;
+    transform: rotate(-35deg);
+    opacity: 0.05;
+}
+
 .cta-video {
     position: relative;
+}
+
+.cta-video .cta-video-cover {
+    border-radius: calc(1rem - 1px);
 }
 
 .cta-video .btn-play {
@@ -1107,6 +1141,9 @@ textarea {
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background-color: #f3f3f3;
 }
 
 .post-tags a::before {
@@ -1132,6 +1169,17 @@ textarea {
 .comment-meta {
     display: flex;
     gap: 10px;
+}
+
+.comment-reply-link {
+    color: var(--bs-body-color);
+    padding: 3px 10px;
+    border-radius: 6px;
+    background-color: #f3f3f3;
+}
+
+.comment-reply-link:hover {
+    color: var(--bs-link-color);
 }
 
 .comment-list .children {

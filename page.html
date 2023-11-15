@@ -25,7 +25,7 @@
                 <div class="navbar navbar-expand-lg">
                     <div class="container">
                         <button type="button" class="search-toggler mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search" aria-controls="offcanvas-search">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                            <svg width="24" height="24" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#000000"></path></svg>
                         </button>
                         <div class="site-brand">
                             <a class="custom-logo-link" href="index.html">
@@ -36,7 +36,7 @@
                                 <div class="site-description">Официальный сайт</div>
                             </div>
                         </div>
-                        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                        <button type="button" class="nav-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
                             <div></div>
                             <div></div>
                             <div></div>
@@ -70,22 +70,24 @@
         <div class="offcanvas offcanvas-top offcanvas-search" id="offcanvas-search" tabindex="-1">
             <div class="offcanvas-body">
                 <div class="container">
-                    <form class="search-form" action="#">
-                        <input type="text" class="form-control" placeholder="Поиск по сайту">
-                        <div class="position-absolute top-50 end-0 translate-middle-y d-flex gap-3 align-items-center">
-                            <button type="submit" class="btn p-1 border-0">
-                                <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
-                                </svg>
-                            </button>
-                            <button type="button" class="btn p-1 border-0" data-bs-dismiss="offcanvas">
-                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 1L24 24" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M1 24L24 1" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
+                    <div class="d-flex gap-3 align-items-center">
+                        <form class="search-form" action="#">
+                            <input type="text" class="form-control" placeholder="Поиск по сайту">
+                            <div class="position-absolute top-50 end-0 translate-middle-y d-flex gap-3 align-items-center">
+                                <button type="submit" class="btn p-1 border-0">
+                                    <svg width="30" height="30" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9481 4.12823C8.50494 4.12823 4.08752 8.52699 4.08752 13.9591C4.08752 19.3912 8.50494 23.7899 13.9481 23.7899C16.3631 23.7899 18.5763 22.924 20.2912 21.4861C20.3083 21.5066 20.3264 21.5265 20.3457 21.5457L26.348 27.5282C26.6833 27.8624 27.226 27.8615 27.5602 27.5262C27.8944 27.1909 27.8935 26.6482 27.5582 26.314L21.5559 20.3315C21.5379 20.3136 21.5193 20.2966 21.5001 20.2806C22.9407 18.5719 23.8087 16.367 23.8087 13.9591C23.8087 8.52699 19.3913 4.12823 13.9481 4.12823ZM5.80181 13.9591C5.80181 9.47911 9.44636 5.84252 13.9481 5.84252C18.4499 5.84252 22.0944 9.47911 22.0944 13.9591C22.0944 18.4391 18.4499 22.0757 13.9481 22.0757C9.44636 22.0757 5.80181 18.4391 5.80181 13.9591Z" fill="#778894"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <button type="button" class="btn p-1 border-0" data-bs-dismiss="offcanvas">
+                            <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L24 24" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 24L24 1" stroke="#778894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,415 +161,415 @@
                                             <tr>
                                                 <td><span class="shop-metro">Павелецкая</span></td>
                                                 <td><a href="/magazin/na-paveletskoy/" class="shop-address">Москва, ул. Дубининская, 11, стр. 1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Орехово</span></td>
                                                 <td><a href="/magazin/na-orehovo/" class="shop-address">Москва, Шипиловский проезд, 39к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Домодедовская</span></td>
                                                 <td><a href="/magazin/na-domodedovskoy/" class="shop-address">Москва, улица Генерала Белова, 35</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Кантемировская</span></td>
                                                 <td><a href="/magazin/na-kantemirovskoy/" class="shop-address">Москва, Пролетарский проспект, 24Б</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Коломенская</span></td>
                                                 <td><a href="/magazin/na-kolomenskoy/" class="shop-address">Москва, Судостроительная улица, 1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Динамо</span></td>
                                                 <td><a href="/magazin/na-dinamo/" class="shop-address">Москва, улица Верхняя Масловка, 29</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Аэропорт</span></td>
                                                 <td><a href="/magazin/na-aeroport/" class="shop-address">Москва, ул. Черняховского, 4</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Войковская</span></td>
                                                 <td><a href="/magazin/na-voykovskoy/" class="shop-address">Москва, Ленинградское шоссе, 14, стр. 1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Речной вокзал</span></td>
                                                 <td><a href="/magazin/na-rechnom-vokzale/" class="shop-address">Москва, Смольная улица, 24а</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-red">
                                             <tr>
                                                 <td><span class="shop-metro">Комсомольская</span></td>
                                                 <td><a href="/magazin/na-komsomolskoy/" class="shop-address">Москва, Комсомольская площадь, 2</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Преображенская площадь</span></td>
                                                 <td><a href="/magazin/na-preobrazhenskoy-ploshhadi/" class="shop-address">Москва, Большая Черкизовская улица, 5А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Черкизовская</span></td>
                                                 <td><a href="/magazin/na-cherkizovskoy/" class="shop-address">Москва, Халтуринская улица, 17</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Бульвар Рокоссовского</span></td>
                                                 <td><a href="/magazin/na-bulvare-rokossovskogo/" class="shop-address">Москва, бул. Маршала Рокоссовского, 30</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-019ee0">
                                             <tr>
                                                 <td><span class="shop-metro">Фили</span></td>
                                                 <td><a href="/magazin/na-fili/" class="shop-address">Москва, Новозаводская улица, 1А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Багратионовская</span></td>
                                                 <td><a href="/magazin/na-bagrationovskoy/" class="shop-address">Москва, улица Барклая, 10А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Филёвский парк</span></td>
                                                 <td><a href="/magazin/na-filevskom-parke/" class="shop-address">Москва, ул. Минская, 15, корп. 1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Пионерская</span></td>
                                                 <td><a href="/magazin/na-pionerskoy/" class="shop-address">Москва, Кастанаевская улица, 38</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-b61d8e">
                                             <tr>
                                                 <td><span class="shop-metro">Котельники</span></td>
                                                 <td><a href="/magazin/na-kotelnikah/" class="shop-address">Московская область, Котельники, микрорайон Опытное Поле, 11</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Жулебино</span></td>
                                                 <td><a href="/magazin/na-zhulebino/" class="shop-address">Московская область, Люберцы, посёлок Калинина, 42</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Лермонтовский проспект</span></td>
                                                 <td><a href="/magazin/na-lermontovskom-prospekte/" class="shop-address">Москва, Хвалынский бульвар, 6/10</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Выхино</span></td>
                                                 <td><a href="/magazin/na-vyhino/" class="shop-address">Москва, улица Хлобыстова, 3</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Рязанский проспект</span></td>
                                                 <td><a href="/magazin/na-ryazanskom-prospekte/" class="shop-address">Москва, Рязанский проспект, 46к7</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Кузьминки</span></td>
                                                 <td><a href="/magazin/na-kuzminkah/" class="shop-address">Москва, Зеленодольская улица, 33к1с2</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Текстильщики</span></td>
                                                 <td><a href="/magazin/na-tekstilshikah/" class="shop-address">Москва, Люблинская улица, 4с1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Волгоградский проспект</span></td>
                                                 <td><a href="/magazin/na-volgogradskom-prospekte/" class="shop-address">Москва, улица Талалихина, 17с5</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Таганская</span></td>
                                                 <td><a href="/magazin/na-taganskoy/" class="shop-address">Москва, Таганская улица, 25/27</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Полежаевская</span></td>
                                                 <td><a href="/magazin/na-polezhaevskoy/" class="shop-address">Москва, Хорошёвское шоссе, 23к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Октябрьское Поле</span></td>
                                                 <td><a href="/magazin/na-oktyaborskom-pole/" class="shop-address">Москва, улица Маршала Тухачевского, 34</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Щукинская</span></td>
                                                 <td><a href="/magazin/na-shchukinskoy/" class="shop-address">Москва, улица Маршала Василевского, 17</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Тушинская</span></td>
                                                 <td><a href="/magazin/na-tushinskoy/" class="shop-address">Москва, проезд Стратонавтов, 12с1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Сходненская</span></td>
                                                 <td><a href="/magazin/na-shodnenskoy/" class="shop-address">Москва, Химкинский бульвар, 16к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Планерная</span></td>
                                                 <td><a href="/magazin/na-planernoy/" class="shop-address">Москва, Планерная улица, 7к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-blue">
                                             <tr>
                                                 <td><span class="shop-metro">Щёлковская</span></td>
                                                 <td><a href="/magazin/na-shelkovskoy/" class="shop-address">Москва, Уральская улица, 1А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Первомайская</span></td>
                                                 <td><a href="/magazin/na-pervomayskoy/" class="shop-address">Москва, Первомайская улица, 85</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Измайловская</span></td>
                                                 <td><a href="/magazin/na-izmaylovskoy/" class="shop-address">Москва, 3-я Парковая улица, 7/17</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Партизанская</span></td>
                                                 <td><a href="/magazin/na-partizanskoy/" class="shop-address">Москва, ул. Щербаковская, 55</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Семёновская</span></td>
                                                 <td><a href="/magazin/na-semenovskoy/" class="shop-address">Москва, улица Преображенский Вал, 24, корп. 2</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Курская</span></td>
                                                 <td><a href="/magazin/na-kurskoy/" class="shop-address">Москва, ул. Земляной Вал, 32</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Славянский Бульвар</span></td>
                                                 <td><a href="/magazin/na-slavyanskom-bulvare/" class="shop-address">Москва, Кастанаевская улица, 38</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Молодёжная</span></td>
                                                 <td><a href="/magazin/na-molodezhnoy/" class="shop-address">Москва, Ярцевская улица, 29, корп. 4</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Строгино</span></td>
                                                 <td><a href="/magazin/na-strogino/" class="shop-address">Москва, улица Маршала Катукова, 18, стр. 1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Митино</span></td>
                                                 <td><a href="/magazin/na-mitino/" class="shop-address">Москва, Дубравная улица, 40</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Пятницкое шоссе</span></td>
                                                 <td><a href="/magazin/na-pyatnitskom-shosse/" class="shop-address">Москва, Ангелов переулок, 9</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-ff9933">
                                             <tr>
                                                 <td><span class="shop-metro">Беляево</span></td>
                                                 <td><a href="/magazin/na-belyaevo/" class="shop-address">Москва, Профсоюзная улица, 104</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Новые Черёмушки</span></td>
                                                 <td><a href="/magazin/na-novyh-cheryomushkah/" class="shop-address">Москва, улица Гарибальди, 23/54</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Профсоюзная</span></td>
                                                 <td><a href="/magazin/na-profsoyuznoy/" class="shop-address">Москва, Нахимовский проспект, 40</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Шаболовская</span></td>
                                                 <td><a href="/magazin/na-shabolovskoy/" class="shop-address">Москва, Ленинский проспект, 11с1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">ВДНХ</span></td>
                                                 <td><a href="/magazin/na-vdnh/" class="shop-address">Москва, улица Цандера, 7, корп. 2А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Свиблово</span></td>
                                                 <td><a href="/magazin/na-sviblovo/" class="shop-address">Москва, ул. Снежная, 16, корп.2</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Бабушкинская</span></td>
                                                 <td><a href="/magazin/na-babushkinskoy/" class="shop-address">Москва, проезд Дежнёва, 23Б</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Медведково</span></td>
                                                 <td><a href="/magazin/na-medvedkovo/" class="shop-address">Москва, Широкая улица, 9, корп. 1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-ffd803">
                                             <tr>
                                                 <td><span class="shop-metro">Площадь Ильича</span></td>
                                                 <td><a href="/magazin/na-ploshadi-ilicha/" class="shop-address">Москва, Душинская улица, 10</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Авиамоторная</span></td>
                                                 <td><a href="/magazin/na-aviamotornoy/" class="shop-address">Москва, Авиамоторная улица, 41</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Шоссе Энтузиастов</span></td>
                                                 <td><a href="/magazin/na-shosse-entuziastov/" class="shop-address">Москва, улица Плеханова, 30</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Перово</span></td>
                                                 <td><a href="/magazin/na-perovo/" class="shop-address">Москва, 2-я Владимирская улица, 40</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Новогиреево</span></td>
                                                 <td><a href="/magazin/na-novogireevo/" class="shop-address">Москва, Новогиреевская улица, 11/36с1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Новокосино</span></td>
                                                 <td><a href="/magazin/na-novokosino/" class="shop-address">Московская область, Реутов, ул. Ленина, 6</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-83bee2">
                                             <tr>
                                                 <td><span class="shop-metro">Варшавская</span></td>
                                                 <td><a href="/magazin/na-varshavskoy/" class="shop-address">Москва, Каширский пр., 10</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-a2a5b4">
                                             <tr>
                                                 <td><span class="shop-metro">Бульвар Дмитрия Донского</span></td>
                                                 <td><a href="/magazin/na-bulvare-dmitriya-donskogo/" class="shop-address">Москва, бульвар Дмитрия Донского, 2к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Аннино</span></td>
                                                 <td><a href="/magazin/na-annino/" class="shop-address">Москва, Варшавское шоссе, 143А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Улица Академика Янгеля</span></td>
                                                 <td><a href="/magazin/na-ulice-akademika-yangelya/" class="shop-address">Москва, Дорожная улица, 24к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Чертановская</span></td>
                                                 <td><a href="/magazin/na-chertanovskoy/" class="shop-address">Москва, Чертановская улица, 1Вк1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Тульская</span></td>
                                                 <td><a href="/magazin/na-tulskoy/" class="shop-address">Москва, Малая Тульская улица, 2/1к4</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Менделеевская</span></td>
                                                 <td><a href="/magazin/na-mendeleevskoy/" class="shop-address">Москва, Новослободская улица, 36/1с1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Савёловская</span></td>
                                                 <td><a href="/magazin/na-savyolovskoy/" class="shop-address">Москва, Складочная улица, 1Дс2</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Тимирязевская</span></td>
                                                 <td><a href="/magazin/na-timiryazevskoy/" class="shop-address">Москва, улица Яблочкова, 23Е</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Владыкино</span></td>
                                                 <td><a href="/magazin/na-vladykino/" class="shop-address">Москва, Сигнальный проезд, 6А</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Отрадное</span></td>
                                                 <td><a href="/magazin/v-otradnom/" class="shop-address">Москва, Отрадная улица, 7</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Бибирево</span></td>
                                                 <td><a href="/magazin/na-bibirevo/" class="shop-address">Москва, Костромская улица, 14Б</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Алтуфьево</span></td>
                                                 <td><a href="/magazin/na-altufevo/" class="shop-address">Москва, Алтуфьевское шоссе, 91</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                         <tbody class="shops-metro-adf398">
                                             <tr>
                                                 <td><span class="shop-metro">Марьино</span></td>
                                                 <td><a href="/magazin/na-maryno/" class="shop-address">Москва, Люблинская улица, 165к3</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Братиславская</span></td>
                                                 <td><a href="/magazin/na-bratislavsloy/" class="shop-address">Москва, Братиславская улица, 14</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Люблино</span></td>
                                                 <td><a href="/magazin/v-lublino/" class="shop-address">Москва, Краснодарская улица, 57к1</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Волжская</span></td>
                                                 <td><a href="/magazin/na-volzhskoy/" class="shop-address">Москва, 7-я улица Текстильщиков, 14</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Печатники</span></td>
                                                 <td><a href="/magazin/na-pechatnikah/" class="shop-address">Москва, улица Юных Ленинцев, 3</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Кожуховская</span></td>
                                                 <td><a href="/magazin/na-kozhuhovskoy/" class="shop-address">Москва, Южнопортовая улица, 14/32</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Дубровка</span></td>
                                                 <td><a href="/magazin/na-dubrovke/" class="shop-address">Москва, Шарикоподшипниковская улица, 11с7</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Чкаловская</span></td>
                                                 <td><a href="/magazin/na-chkalovskoy/" class="shop-address">Москва, улица Земляной Вал, 32</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                             <tr>
                                                 <td><span class="shop-metro">Марьина Роща</span></td>
                                                 <td><a href="/magazin/na-marinoy-roshe/" class="shop-address">Москва, 2-й Стрелецкий проезд, 10</a></td>
-                                                <td><span class="shop-hours">Ежедневно:<br> 09:00 — 21:00</span></td>
+                                                <td><span class="shop-hours">Ежедневно: 09:00 — 21:00</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -617,23 +619,42 @@
                     <div class="col-md-6 col-lg-3 order-lg-2">
                         <div class="footer-widget">
                             <p class="widegt-title">Полезные ссылки</p>
-                            <nav class="nav">
-                                <a href="#" class="nav-link">Каталог</a>
-                                <a href="#" class="nav-link">Магазины на карте</a>
-                                <a href="#" class="nav-link">Акции</a>
-                                <a href="#" class="nav-link">Новости</a>
-                                <a href="#" class="nav-link">Контакты</a>
-                            </nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="nav-link underline">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Магазины на карте</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Акции</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Контакты</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Какой-то длинный пункт меню для заполнения</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 order-lg-3">
                         <div class="footer-widget">
                             <p class="widegt-title">Контактная информация</p>
-                            <nav class="nav">
-                                <a href="#" class="nav-link">Реклама партнёрам</a>
-                                <a href="#" class="nav-link">Условия использования</a>
-                                <a href="#" class="nav-link">Политика безопасности данных</a>
-                            </nav>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="nav-link underline">Реклама партнёрам</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Условия использования</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link underline">Политика безопасности данных</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
