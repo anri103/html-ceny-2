@@ -1284,43 +1284,43 @@ textarea {
     background-color: transparent;
 }
 
-.shops-metro-green .shop-metro::before {
+.shop-metro[data-vetka="zelenaya"]::before {
     background-color: green;
 }
 
-.shops-metro-red .shop-metro::before {
+.shop-metro[data-vetka="krasnaya"]::before {
     background-color: red;
 }
 
-.shops-metro-019ee0 .shop-metro::before {
+.shop-metro[data-vetka="golubaya"]::before {
     background-color: #019ee0;
 }
 
-.shops-metro-b61d8e .shop-metro::before {
+.shop-metro[data-vetka="fioletovaya"]::before {
     background-color: #b61d8e;
 }
 
-.shops-metro-blue .shop-metro::before {
+.shop-metro[data-vetka="sinyaya"]::before {
     background-color: blue;
 }
 
-.shops-metro-ff9933 .shop-metro::before {
+.shop-metro[data-vetka="orangevaya"]::before {
     background-color: #ff9933;
 }
 
-.shops-metro-ffd803 .shop-metro::before {
+.shop-metro[data-vetka="jeltaya"]::before {
     background-color: #ffd803;
 }
 
-.shops-metro-83bee2 .shop-metro::before {
+.shop-metro[data-vetka="mcd"]::before {
     background-color: #83bee2;
 }
 
-.shops-metro-a2a5b4 .shop-metro::before {
+.shop-metro[data-vetka="seraya"]::before {
     background-color: #a2a5b4;
 }
 
-.shops-metro-adf398 .shop-metro::before {
+.shop-metro[data-vetka="salatovaya"]::before {
     background-color: #adf398;
 }
 
