@@ -1065,7 +1065,7 @@ textarea {
     margin-top: 42px;
 }
 
-.pagination-list {
+.navigation-pagination ul {
     --bs-link-color: #120e1e;
     --bs-link-hover-color: #fea116;
     display: flex;
@@ -1076,7 +1076,7 @@ textarea {
     list-style: none;
 }
 
-.pagination-link {
+.navigation-pagination ul li .page-numbers {
     display: inline-block;
     padding: 6px 15px;
     border: 1px solid transparent;
@@ -1088,7 +1088,7 @@ textarea {
     transition: all 0.15s ease-in-out;
 }
 
-.pagination-link.current {
+.navigation-pagination ul li .current {
     color: #fff;
     border-color: #FEA116;
     background-color: #FEA116;
