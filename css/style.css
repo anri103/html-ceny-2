@@ -1185,6 +1185,7 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    margin-bottom: 32px;
 }
 
 .post-tags a {
@@ -1200,10 +1201,6 @@ textarea {
     content: "#";
 }
 
-.post-comments {
-    margin-top: 64px;
-}
-
 .comment-list {
     margin: 0;
     padding: 0;
@@ -1211,8 +1208,8 @@ textarea {
 }
 
 .comment-inner {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-top: 1px solid #e1e8ed;
 }
 
@@ -1233,7 +1230,7 @@ textarea {
 }
 
 .comment-list .children {
-    padding-left: 70px;
+    padding-left: 50px;
     margin: 0;
     list-style: none;
 }
@@ -1242,6 +1239,7 @@ textarea {
     padding: 32px 16px;
     border-radius: 8px;
     background-color: #F1F8FF;
+    margin-bottom: 30px;
 }
 
 .custom-post-map {
