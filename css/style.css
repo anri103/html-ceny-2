@@ -279,7 +279,7 @@ textarea {
     --theme-header-height: 80px;
     position: relative;
     height: var(--theme-header-height);
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .fixed-header {
@@ -588,7 +588,7 @@ textarea {
 [ + FOOTER ]*/
 
 .footer {
-    padding: 48px 0 24px;
+    padding: 48px 0 32px;
 }
 
 .footer-widget {
@@ -604,18 +604,38 @@ textarea {
     font-weight: 500;
 }
 
-.footer-widget .nav {
+/* WordPress widget style */
+
+.footer-widget ul.menu {
     --bs-nav-link-padding-x: 0;
     --bs-nav-link-padding-y: 0;
     --bs-nav-link-font-size: 14px;
+    --bs-nav-link-font-weight: 400;
     --bs-nav-link-color: #120e1e;
     --bs-nav-link-hover-color: #fea116;
+    display: flex;
     flex-direction: column;
     gap: 8px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
 
-.footer-widget .nav .nav-link {
+.footer-widget ul.menu li a {
     display: inline;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-weight: var(--bs-nav-link-font-weight);
+    color: var(--bs-nav-link-color);
+    text-decoration: none;
+    background: linear-gradient(currentColor,currentColor) 0 100% no-repeat;
+    background-size: 0 1px;
+    transition: background-size .45s ease-in-out;
+}
+
+.footer-widget ul.menu li a:hover {
+    color: var(--bs-nav-link-hover-color);
+    background-size: 100% 1px;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -667,6 +687,9 @@ textarea {
 .site-wrapper {
     max-width: 1200px;
     width: 100%;
+    padding-top: 2rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
     margin-right: auto;
     margin-left: auto;
     background-color: #fff;
@@ -688,7 +711,7 @@ textarea {
 
 @media (min-width: 992px) {
     .section {
-        padding: 0 24px 64px;
+        padding: 0 0 64px;
     }
 }
 
@@ -742,9 +765,8 @@ textarea {
 }
 
 .card-img-scale img {
-    max-width: 100%;
-    height: auto;
     width: 100%;
+    height: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
     object-position: 50% 50%;
@@ -849,6 +871,13 @@ textarea {
     background-color: #6c757d;
 }
 
+@media (min-width: 992px) {
+
+    .card-horizontal .card-img-scale {
+        border-bottom: none;
+    }
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ + SWIPER ]*/
 
@@ -932,6 +961,18 @@ textarea {
     height: auto;
 }
 
+.arrow-right {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px 1px rgb(0 0 0 / 10%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-color: #d9d9d9;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(-420.000000, -6559.000000)' fill='%23fff'%3E%3Cg transform='translate(56.000000, 160.000000)'%3E%3Cpath d='M375.127681,6399.29274 C374.737008,6398.90242 374.104537,6398.90242 373.714864,6399.29274 C373.324191,6399.68307 373.324191,6400.31497 373.714864,6400.7043 L380.149475,6407.14215 C380.464211,6407.45661 380.241398,6408.00167 379.79677,6408.00167 L365.016149,6408.00167 C364.464611,6408.00167 364,6408.44091 364,6408.99195 L364,6408.99594 C364,6409.54699 364.464611,6409.99821 365.016149,6409.99821 L379.79677,6409.99821 C380.241398,6409.99821 380.464211,6410.52829 380.149475,6410.84275 L373.68389,6417.29957 C373.293217,6417.68889 373.293217,6418.3188 373.68389,6418.70913 L373.68389,6418.70813 C374.073563,6419.09746 374.706034,6419.09746 375.096707,6418.70713 L383.41474,6410.39652 L383.41474,6410.39652 C384.195087,6409.61687 384.195087,6408.35206 383.41474,6407.57241 C383.233892,6407.39272 374.946832,6399.11206 375.127681,6399.29274'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
 @media (min-width: 992px) {
 
     .outside-next {
@@ -946,7 +987,9 @@ textarea {
 /*------------------------------------------------------------------
 [ section-top-ad ]*/
 
-.section-top-ad {}
+.section-top-ad {
+    position: relative;
+}
 
 /*------------------------------------------------------------------
 [ main-content ]*/
@@ -1053,12 +1096,18 @@ textarea {
 }
 
 /*------------------------------------------------------------------
-[ archive-grid ]*/
+[ archive-grid & archive-list ]*/
 
 .archive-grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 30px 20px;
+}
+
+.archive-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .navigation-pagination {
@@ -1069,6 +1118,7 @@ textarea {
     --bs-link-color: #120e1e;
     --bs-link-hover-color: #fea116;
     display: flex;
+	flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     padding: 0;
